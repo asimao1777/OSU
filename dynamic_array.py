@@ -2,7 +2,7 @@
 # OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
 # Assignment: 02
-# Due Date: Jul 17, 2024
+# Due Date: Jul 16, 2024
 # Description:
 
 
