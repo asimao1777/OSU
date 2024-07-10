@@ -333,34 +333,31 @@ def find_mode(arr: DynamicArray) -> tuple[DynamicArray, int]:
     if arr.length() == 0:
         return (DynamicArray(), 0)
 
-    if arr.length() == 1:
-        return (DynamicArray([arr[0]]), 1)
-
     count = 1
     num = arr[0]
     max = 1
     mode = DynamicArray()
-    temp_arr = DynamicArray()
-    temp = 0
 
     for index in range(1, arr.length()):
         if arr[index] == num:
             count += 1
-        else:
-            temp_arr.append((num, count))
-            count = 1
-            num = arr[index]
-    temp_arr.append((num, count))
 
-    for index in range(temp_arr.length()):
-        num, freq = temp_arr[index]
-        if freq > max:
-            max = freq
-            mode.append(num)
-            temp = num
-        elif freq == max and num != temp:
-            mode.append(num)
-            temp = num
+        else:
+            if count > max:
+                max = count
+                mode = DynamicArray()
+                mode.append(num)
+            elif count == max:
+                mode.append(num)
+            num = arr[index]
+            count = 1
+
+    if count > max:
+        max = count
+        mode = DynamicArray()
+        mode.append(num)
+    elif count == max:
+        mode.append(num)
 
     return mode, max
 
@@ -620,3 +617,13 @@ if __name__ == "__main__":
         da.append(case[x])
         mode, frequency = find_mode(da)
         print(f"{da}\nMode: {mode}, Frequency: {frequency}")
+
+    x = [1, 1, 2, 3, 4, 4]
+    da = DynamicArray(x)
+    mode, frequency = find_mode(da)
+    print(f"{da}\nMode: {mode}, Frequency: {frequency}")
+
+    x = [-586, -495, -347, -268, 292, 292, 292, 425]
+    da = DynamicArray(x)
+    mode, frequency = find_mode(da)
+    print(f"{da}\nMode: {mode}, Frequency: {frequency}")
