@@ -311,11 +311,11 @@ class DynamicArray:
             for pos in range(2, self._size):
                 first_iter = reduce_func(first_iter, self._data[pos])
             return first_iter
-        elif initializer is not None and self._size is 1:
+        elif initializer is not None and self._size == 1:
             return reduce_func(initializer, self._data[0])
-        elif self._size is 0:
+        elif self._size == 0:
             return initializer
-        elif self._size is 1:
+        elif self._size == 1:
             return self._data[0]
         else:
             first_iter = reduce_func(initializer, self._data[0])
@@ -326,9 +326,43 @@ class DynamicArray:
 
 def find_mode(arr: DynamicArray) -> tuple[DynamicArray, int]:
     """
-    TODO: Write this implementation
+    :param arr: DynamicArray object
+
+    :returns: a tuple with a DynamicArray object and an integer
     """
-    pass
+    if arr.length() == 0:
+        return (DynamicArray(), 0)
+
+    if arr.length() == 1:
+        return (DynamicArray([arr[0]]), 1)
+
+    count = 1
+    num = arr[0]
+    max = 1
+    mode = DynamicArray()
+    temp_arr = DynamicArray()
+    temp = 0
+
+    for index in range(1, arr.length()):
+        if arr[index] == num:
+            count += 1
+        else:
+            temp_arr.append((num, count))
+            count = 1
+            num = arr[index]
+    temp_arr.append((num, count))
+
+    for index in range(temp_arr.length()):
+        num, freq = temp_arr[index]
+        if freq > max:
+            max = freq
+            mode.append(num)
+            temp = num
+        elif freq == max and num != temp:
+            mode.append(num)
+            temp = num
+
+    return mode, max
 
 
 # ------------------- BASIC TESTING -----------------------------------------
@@ -576,6 +610,7 @@ if __name__ == "__main__":
 
     for case in test_cases:
         da = DynamicArray(case)
+        # print(find_mode(da))
         mode, frequency = find_mode(da)
         print(f"{da}\nMode: {mode}, Frequency: {frequency}\n")
 
