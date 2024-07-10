@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Correct Due Date&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/CS261.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS261.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished def find_mode()&quot;">
       <change beforePath="$PROJECT_DIR$/dynamic_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic_array.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,13 +113,22 @@
       <option name="project" value="LOCAL" />
       <updated>1720556520030</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;Finished def find_mode()&quot;">
+      <option name="closed" value="true" />
+      <created>1720648005685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720648005685</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&quot;Correct Due Date&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Correct Due Date&quot;" />
+    <MESSAGE value="&quot;Finished def find_mode()&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Finished def find_mode()&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -131,11 +137,6 @@
           <url>file://$USER_HOME$/Library/CloudStorage/Dropbox/30_OSU/Courses/CS 261_DATA STRUCTURES/Assignments/2/dynamic_array.py</url>
           <line>308</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dynamic_array.py</url>
-          <line>340</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

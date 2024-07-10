@@ -326,38 +326,39 @@ class DynamicArray:
 
 def find_mode(arr: DynamicArray) -> tuple[DynamicArray, int]:
     """
+    Determines the mode or modes for and its frequency from a DynamicArray object.
+
     :param arr: DynamicArray object
 
     :returns: a tuple with a DynamicArray object and an integer
     """
-    if arr.length() == 0:
-        return (DynamicArray(), 0)
 
     count = 1
     num = arr[0]
-    max = 1
-    mode = DynamicArray()
+    max = 1                                     # frequency of the mode or modes
+    mode = DynamicArray()                       # mode array created to deal with count = max for first 2 items
 
+    # Checks for the mode and frequency of items
     for index in range(1, arr.length()):
         if arr[index] == num:
             count += 1
-
         else:
             if count > max:
                 max = count
-                mode = DynamicArray()
+                mode = DynamicArray()            # created to overwrite previous mode in the mode array if count > max
                 mode.append(num)
             elif count == max:
-                mode.append(num)
+                mode.append(num)                 # if count = max, then appends the num to current mode array
             num = arr[index]
             count = 1
 
+    # Checks for the last item in the array
     if count > max:
         max = count
-        mode = DynamicArray()
+        mode = DynamicArray()                    # created to overwrite previous mode in the mode array if count > max
         mode.append(num)
     elif count == max:
-        mode.append(num)
+        mode.append(num)                         # if count = max, then appends the num to current mode array
 
     return mode, max
 
@@ -618,12 +619,3 @@ if __name__ == "__main__":
         mode, frequency = find_mode(da)
         print(f"{da}\nMode: {mode}, Frequency: {frequency}")
 
-    x = [1, 1, 2, 3, 4, 4]
-    da = DynamicArray(x)
-    mode, frequency = find_mode(da)
-    print(f"{da}\nMode: {mode}, Frequency: {frequency}")
-
-    x = [-586, -495, -347, -268, 292, 292, 292, 425]
-    da = DynamicArray(x)
-    mode, frequency = find_mode(da)
-    print(f"{da}\nMode: {mode}, Frequency: {frequency}")
