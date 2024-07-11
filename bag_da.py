@@ -102,6 +102,7 @@ class Bag:
         """
 
         flag = True
+        counter = 0
 
         # If both objects do not have the same cardinality they are not equal
         if second_bag.size() != self._da.length():
@@ -110,9 +111,14 @@ class Bag:
         # Check whether the items are the same in both objects
         else:
             for index in range(self._da.length()):
-                if second_bag.count(self._da[index]) != 1:
+                for pos in range(self._da.length()):
+                    if self._da[index] == self._da[pos]:
+                        counter += 1
+
+                if second_bag.count(self._da[index]) != counter:
                     flag = False
-            return flag
+                counter = 0
+        return flag
 
     def __iter__(self):
         """
