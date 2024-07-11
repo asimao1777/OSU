@@ -3,7 +3,7 @@
 # Course: CS261 - Data Structures
 # Assignment: 02
 # Due Date: Jul 15, 2024
-# Description: Creation of several methods for the class (ADT) DynamicArray.
+# Description: Creation of several methods for the class DynamicArray.
 
 
 
@@ -138,7 +138,7 @@ class DynamicArray:
 
         :param new_capacity: integer
 
-        :returns: previous DynamicArray object or does not return
+        :return: previous DynamicArray object or does not return
         """
 
         # Data validation for new capacity
@@ -165,7 +165,7 @@ class DynamicArray:
 
         :param value: any data type object
 
-        :returns: does not return
+        :return: does not return
         """
         # Checks size and capacity and appends value at the end of array (resized or not)
         if self._size == self._capacity:
@@ -181,7 +181,7 @@ class DynamicArray:
         :param index: integer
         :param value: any data type object
 
-        :returns: does not return
+        :return: does not return
         """
         # Data validation
         if index < 0 or index > self._size:
@@ -205,7 +205,7 @@ class DynamicArray:
 
         :param index: integer
 
-        :returns: does not return
+        :return: does not return
         """
         # Data validation
         if index < 0 or index >= self._size:
@@ -231,7 +231,7 @@ class DynamicArray:
         :param start_index: integer
         :param size: integer
 
-        :returns: a DynamicArray object
+        :return: a DynamicArray object
         """
         # Data Validation
         if ((start_index < 0 or start_index >= self._size)
@@ -253,7 +253,7 @@ class DynamicArray:
 
         :param second_da: DynamicArray object
 
-        :returns: does not return
+        :return: does not return
         """
         for pos in range(second_da.length()):
             self.append(second_da[pos])
@@ -265,7 +265,7 @@ class DynamicArray:
 
         :param map_func: a function
 
-        :returns: a DynamicArray object
+        :return: a DynamicArray object
         """
         # Creates a new DynamicArray object (new array)
         output_arr = DynamicArray()
@@ -282,7 +282,7 @@ class DynamicArray:
 
         :param filter_func: a function
 
-        :returns: a DynamicArray object
+        :return: a DynamicArray object
         """
         # Creates a new DynamicArray object (new array)
         output_arr = DynamicArray()
@@ -303,7 +303,7 @@ class DynamicArray:
         :param reduce_func: a function
         :param initializer: an integer
 
-        :returns: integer or None
+        :return: an integer or None
         """
 
         # Checks conditions and apply reduce_func accordingly
@@ -331,7 +331,7 @@ def find_mode(arr: DynamicArray) -> tuple[DynamicArray, int]:
 
     :param arr: DynamicArray object
 
-    :returns: a tuple with a DynamicArray object and an integer
+    :return: a tuple with a DynamicArray object and an integer
     """
 
     count = 1
