@@ -1,9 +1,9 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 02
+# Due Date: Jul 16, 2024
+# Description: Creation of Bag class with its methods.
 
 
 from dynamic_array import *
@@ -44,45 +44,104 @@ class Bag:
 
     def add(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Adds an item to the bag.
+
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+        self._da.append(value)
 
     def remove(self, value: object) -> bool:
         """
-        TODO: Write this implementation
+        Removes an item from the bag that coincides with the value passed.
+
+        :param value: any Python object
+
+        :return: a boolean (True if the value passed is removed and False otherwise)
         """
-        pass
+
+        for index in range(self._da.length()):
+            if self._da[index] == value:
+                self._da.remove_at_index(index)
+                return True
+        return False
 
     def count(self, value: object) -> int:
         """
-        TODO: Write this implementation
+        Counts the number of items in the bag that coincides with the value passed.
+
+    :param value: any Python object
+
+    :return: an integer
         """
-        pass
+        final_count = 0
+        for index in range(self._da.length()):
+            if self._da[index] == value:
+                final_count += 1
+
+        return final_count
 
     def clear(self) -> None:
         """
-        TODO: Write this implementation
+        Clears all items in the bag.
+
+        :param: no parameters
+
+        :return: does not return
         """
-        pass
+        self._da = DynamicArray()
 
     def equal(self, second_bag: "Bag") -> bool:
         """
-        TODO: Write this implementation
+        Compares elements of two bag objects.
+
+        :param second_bag: Bag object
+
+        :returns: a boolean (True if the bags are equal, False otherwise)
         """
-        pass
+
+        flag = True
+
+        # If both objects do not have the same cardinality they are not equal
+        if second_bag.size() != self._da.length():
+           return False
+
+        # Check whether the items are the same in both objects
+        else:
+            for index in range(self._da.length()):
+                if second_bag.count(self._da[index]) != 1:
+                    flag = False
+            return flag
 
     def __iter__(self):
         """
-        TODO: Write this implementation
+        Makes the Bag object a iterable object.
+
+        :param: no parameters
+
+        :return: an iterator Bag object
         """
-        pass
+        self._index = 0
+
+        return self
 
     def __next__(self):
         """
-        TODO: Write this implementation
+        Returns the next item in the bag based on the current index
+        of the iterator.
+
+        :param: no parameters
+
+        :return: a Python object (each item of an array)
         """
-        pass
+        try:
+            value = self._da[self._index]
+        except DynamicArrayException:
+            raise StopIteration
+
+        self._index += 1
+        return value
 
 
 # ------------------- BASIC TESTING -----------------------------------------

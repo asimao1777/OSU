@@ -3,7 +3,8 @@
 # Course: CS261 - Data Structures
 # Assignment: 02
 # Due Date: Jul 16, 2024
-# Description:
+# Description: Creation of several methods for the class (ADT) DynamicArray.
+
 
 
 from static_array import StaticArray
