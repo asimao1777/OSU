@@ -1,9 +1,10 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 3
+# Due Date: Jul 21, 2024
+# Description: Create an Stack ADT Class and its methods, implemented
+#              using a Dynamic Array data structure.
 
 
 from dynamic_array import *
