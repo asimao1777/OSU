@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;All Stack ADT (implemented with DA) methods finished&quot;">
-      <change beforePath="$PROJECT_DIR$/stack_da.py" beforeDir="false" afterPath="$PROJECT_DIR$/stack_da.py" afterDir="false" />
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic_array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queue_sa.py" beforeDir="false" afterPath="$PROJECT_DIR$/queue_sa.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +34,7 @@
     "Python.assignment1.executor": "Run",
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
+    "Python.queue_sa.executor": "Run",
     "Python.sll.executor": "Run",
     "Python.stack_da.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -170,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720974341362</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;">
+      <option name="closed" value="true" />
+      <created>1720974435441</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720974435441</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +202,8 @@
     <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel - corrected error on Data Validation upon Gradescope fail on Slice method&quot;" />
     <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel - corrected another error on Data Validation upon Gradescope fail on Slice method - 2nd submission&quot;" />
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;All Stack ADT (implemented with DA) methods finished&quot;" />
+    <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

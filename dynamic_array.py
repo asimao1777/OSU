@@ -153,12 +153,6 @@ class DynamicArray:
         self._data = new_arr
         self._capacity = new_capacity
 
-        # Moves data from current to new array (resized array)
-        # for pos in range(self._size):
-        #     new_array[pos] = self._data[pos]
-        # self._data = new_array
-        # self._capacity = new_capacity
-
     def append(self, value: object) -> None:
         """
         Adds an element at the end of the DynamicArray object

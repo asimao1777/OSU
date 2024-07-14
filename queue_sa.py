@@ -1,9 +1,10 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 3
+# Due Date: Jul 21, 2024
+# Description: Create a Queue ADT Class and its methods, implemented
+#              using a StaticArray data structure.
 
 
 # Note: Changing any part of the pre-implemented methods (besides adding  #
@@ -89,9 +90,17 @@ class Queue:
 
     def enqueue(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Adds a new item to the end of the queue.
+
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+        if self._current_size == self._sa._size:
+            self._double_queue()
+
+        self[self._current_size] = value
+        self._current_size += 1
 
     def dequeue(self) -> object:
         """
@@ -108,11 +117,17 @@ class Queue:
     # The method below is optional, but recommended, to implement. #
     # You may alter it in any way you see fit.                     #
 
-    def _double_queue(self) -> None:
+    def _double_queue(self) -> StaticArray:
         """
         TODO: Write this implementation
         """
-        pass
+        new_size = self._current_size * 2
+        new_sa = StaticArray(new_size)
+
+        for index in range(self._current_size):
+            new_sa[index] = self._sa[index]
+
+        return new_sa
 
 
 # ------------------- BASIC TESTING -----------------------------------------
