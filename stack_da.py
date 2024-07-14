@@ -52,21 +52,45 @@ class Stack:
 
     def push(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Adds a new item to the top of the stack.
+
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+
+        self._da.append(value)
 
     def pop(self) -> object:
         """
-        TODO: Write this implementation
+        Removes the top item from the stack
+
+        :param: a Stack object
+
+        :return: any Python object
         """
-        pass
+        # Data validation
+        if self.is_empty():
+            raise StackException("The stack is empty.")
+
+        # Removes the last item appended to the stack (top item)
+        item = self._da[self.size() - 1]
+        self._da.remove_at_index(self.size() - 1)
+
+        return item
 
     def top(self) -> object:
         """
-        TODO: Write this implementation
+        Displays the item at the top of the stack.
+
+        :param: a Stack object
+
+        :return: any Python object
+
         """
-        pass
+
+        return self._da[self.size() - 1]
+
 
 
 # ------------------- BASIC TESTING -----------------------------------------

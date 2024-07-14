@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;All SSL methods finished - w/ Sentinel - corrected error on Data Validation upon Gradescope fail on Slice method&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;All SSL methods finished - w/ Sentinel - corrected another error on Data Validation upon Gradescope fail on Slice method - 2nd submission&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sll.py" beforeDir="false" afterPath="$PROJECT_DIR$/sll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack_da.py" beforeDir="false" afterPath="$PROJECT_DIR$/stack_da.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +34,13 @@
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
     "Python.sll.executor": "Run",
+    "Python.stack_da.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.sll">
+  <component name="RunManager">
     <configuration name="dynamic_array (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -154,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720972825812</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;All SSL methods finished - w/ Sentinel - corrected another error on Data Validation upon Gradescope fail on Slice method - 2nd submission&quot;">
+      <option name="closed" value="true" />
+      <created>1720973177751</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720973177751</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,7 +182,8 @@
     <MESSAGE value="&quot;First 2 methods of SLL implementation - w/o Sentinel&quot;" />
     <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel&quot;" />
     <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel - corrected error on Data Validation upon Gradescope fail on Slice method&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;All SSL methods finished - w/ Sentinel - corrected error on Data Validation upon Gradescope fail on Slice method&quot;" />
+    <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel - corrected another error on Data Validation upon Gradescope fail on Slice method - 2nd submission&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;All SSL methods finished - w/ Sentinel - corrected another error on Data Validation upon Gradescope fail on Slice method - 2nd submission&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
