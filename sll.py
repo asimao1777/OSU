@@ -2,8 +2,8 @@
 # OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
 # Assignment: 3
-# Due Date: 21 July 2024
-# Description: Create a SLL Class and its methods.
+# Due Date: Jul 21, 2024
+# Description: Create an SLL Class and its methods.
 
 
 from SLNode import *
@@ -75,10 +75,10 @@ class LinkedList:
 
         :return: does not return
         """
-
+        frontSentinel = self._head
         new_node = SLNode(value)
-        new_node.next = self._head.next
-        self._head.next = new_node
+        new_node.next = frontSentinel.next
+        frontSentinel.next = new_node
 
     def insert_back(self, value: object) -> None:
         """
@@ -88,9 +88,11 @@ class LinkedList:
 
         :return: does not return
         """
-
+        frontSentinel = self._head
         new_node = SLNode(value)
-        cur = self._head
+        cur = frontSentinel                       # cur is always a node at index - 1 because it is the frontSentinel
+
+        # Inserts new node at the tail of the linked list
         while cur.next is not None:
             cur = cur.next
         new_node.next = cur.next
@@ -98,39 +100,149 @@ class LinkedList:
 
     def insert_at_index(self, index: int, value: object) -> None:
         """
-        TODO: Write this implementation
+        Inserts a new value at a specified index position in the SLL
+
+        :param index: an integer
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+        # Data validation
+        if index < 0 or index > self.length():
+            raise SLLException
+
+        frontSentinel = self._head
+        cur = frontSentinel                       # cur is always a node at index - 1 because it is the frontSentinel
+        counter = 0
+
+        # Inserts new node at the index passed as parameter
+        while counter != index:
+            cur = cur.next
+            counter += 1
+        new_node = SLNode(value)
+        new_node.next = cur.next
+        cur.next = new_node
 
     def remove_at_index(self, index: int) -> None:
         """
-        TODO: Write this implementation
+        Removes the node from the SLL at the specified index position.
+
+        :param index: an integer
+
+        :return: does not return
         """
-        pass
+        # Data validation
+        if index < 0 or index >= self.length():
+            raise SLLException
+
+        frontSentinel = self._head
+        cur = frontSentinel                      # cur is always a node at index - 1 because it is the frontSentinel
+        counter = 0
+
+        # Removes node at the index passed as parameter
+        while counter != index:
+            cur = cur.next
+            counter += 1
+        cur.next = cur.next.next
 
     def remove(self, value: object) -> bool:
         """
-        TODO: Write this implementation
+        Removes the first node from the SLL which contains the value
+        passed as parameter.
+
+        :param value: any Python object
+
+        :return: a boolean (True if node was removed, False otherwise)
         """
-        pass
+        frontSentinel = self._head
+        cur = frontSentinel                     # cur is always a node at index - 1 because it is the frontSentinel
+        counter = self.length()
+
+        # Removes node the has the value passed as parameter
+        while counter > 0:
+            if cur.next.value == value:
+                cur.next = cur.next.next
+                return True
+            counter -= 1
+            cur = cur.next
+        return False
 
     def count(self, value: object) -> int:
         """
-        TODO: Write this implementation
+        Counts the number of items in the list that matches the value
+        passed as parameter
+
+        :param value: any Python object
+
+        :returns: an integer
         """
-        pass
+        frontSentinel = self._head
+        cur = frontSentinel                     # cur is always a node at index - 1 because it is the frontSentinel
+        num_matches = 0
+        counter = self.length()
+
+        # Traverses the SLL and counts equality between item and parameter
+        while counter > 0:
+            if cur.next.value == value:
+                num_matches += 1
+            cur = cur.next
+            counter -= 1
+        return num_matches
 
     def find(self, value: object) -> bool:
         """
-        TODO: Write this implementation
+        Checks whether a value exists in a SLL.
+
+        :param value: any Python object
+
+        :return: a boolean (True if the value exists, False otherwise)
         """
-        pass
+        frontSentinel = self._head
+        cur = frontSentinel                     # cur is always a node at index - 1 because it is the frontSentinel
+        counter = self.length()
+
+        # Checks whether the value exists in the SLL
+        while counter > 0:
+            if cur.next.value == value:
+                return True
+            counter -= 1
+            cur = cur.next
+        return False
 
     def slice(self, start_index: int, size: int) -> "LinkedList":
         """
-        TODO: Write this implementation
+        Slices current SLL creating a new SLL through passing a start index and the
+        cardinality of the new SLL as parameters.
+
+        :param start_index: an integer
+        :param size: an integer
+
+        :return: a SLL object
         """
-        pass
+        # Data validation
+        if start_index < 0 or start_index > self.length():
+            raise SLLException
+
+        if size < 0 or size > (self.length() - size):
+            raise SLLException
+
+        new_sll = LinkedList()
+
+        frontSentinel = self._head
+        cur = frontSentinel                     # cur is always a node at index - 1 because it is the frontSentinel
+        counter = 0
+
+        # Moves cur to the starting index (cur = node at start_index)
+        while counter < start_index:
+            cur = cur.next
+            counter += 1
+
+        # Inserts the values into a new SLL (starting from cur)
+        for _ in range(size):
+            new_sll.insert_back(cur.next.value)
+            cur = cur.next
+
+        return new_sll
 
 
 if __name__ == "__main__":
