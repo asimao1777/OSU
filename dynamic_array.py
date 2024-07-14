@@ -6,7 +6,6 @@
 # Description: Creation of several methods for the class DynamicArray.
 
 
-
 from static_array import StaticArray
 
 
