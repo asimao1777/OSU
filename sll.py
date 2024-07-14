@@ -223,14 +223,14 @@ class LinkedList:
         if start_index < 0 or start_index > self.length():
             raise SLLException
 
-        if size < 0 or size > (self.length() - size):
+        if size < 0 or size > (self.length() - start_index):
             raise SLLException
-
-        new_sll = LinkedList()
 
         frontSentinel = self._head
         cur = frontSentinel                     # cur is always a node at index - 1 because it is the frontSentinel
         counter = 0
+
+        new_sll = LinkedList()
 
         # Moves cur to the starting index (cur = node at start_index)
         while counter < start_index:
