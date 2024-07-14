@@ -1,9 +1,9 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 3
+# Due Date: 21 July 2024
+# Description: Create a SLL Class and its methods.
 
 
 from SLNode import *
@@ -69,15 +69,32 @@ class LinkedList:
 
     def insert_front(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Insert a node into an SLL at the front (head).
+
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+
+        new_node = SLNode(value)
+        new_node.next = self._head.next
+        self._head.next = new_node
 
     def insert_back(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Insert a node into an SLL at the back (tail).
+
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+
+        new_node = SLNode(value)
+        cur = self._head
+        while cur.next is not None:
+            cur = cur.next
+        new_node.next = cur.next
+        cur.next = new_node
 
     def insert_at_index(self, index: int, value: object) -> None:
         """

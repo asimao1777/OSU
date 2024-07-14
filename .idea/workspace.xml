@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected Due Date&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CS261.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS261.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dynamic_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic_array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLNode.py" beforeDir="false" afterPath="$PROJECT_DIR$/SLNode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sll.py" beforeDir="false" afterPath="$PROJECT_DIR$/sll.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,37 +34,15 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.assignment1.executor": "Run",
-    "Python.bag_da.executor": "Run",
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
+    "Python.sll.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.bag_da">
-    <configuration name="bag_da" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS261" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bag_da.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.sll">
     <configuration name="dynamic_array (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -106,9 +87,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sll" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS261" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sll.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.bag_da" />
+        <item itemvalue="Python.sll" />
         <item itemvalue="Python.dynamic_array (1)" />
         <item itemvalue="Python.dynamic_array" />
       </list>
@@ -117,7 +120,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -130,66 +133,21 @@
       <option name="presentableId" value="Default" />
       <updated>1720180214489</updated>
     </task>
-    <task id="LOCAL-00001" summary="&quot;Correct Due Date&quot;">
-      <option name="closed" value="true" />
-      <created>1720556520030</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1720556520030</updated>
-    </task>
-    <task id="LOCAL-00002" summary="&quot;Finished def find_mode()&quot;">
-      <option name="closed" value="true" />
-      <created>1720648005685</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1720648005685</updated>
-    </task>
-    <task id="LOCAL-00003" summary="&quot;Finished def find_mode() with comments&quot;">
-      <option name="closed" value="true" />
-      <created>1720648747547</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1720648747547</updated>
-    </task>
-    <task id="LOCAL-00004" summary="&quot;Finished Bag Class&quot;">
-      <option name="closed" value="true" />
-      <created>1720726079208</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1720726079208</updated>
-    </task>
-    <task id="LOCAL-00005" summary="&quot;Corrected Bag Class after Gradescope 1&quot;">
-      <option name="closed" value="true" />
-      <created>1720726668271</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1720726668271</updated>
-    </task>
-    <task id="LOCAL-00006" summary="&quot;Corrected Due Date&quot;">
-      <option name="closed" value="true" />
-      <created>1720727008834</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1720727008834</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Correct Due Date&quot;" />
-    <MESSAGE value="&quot;Finished def find_mode()&quot;" />
-    <MESSAGE value="&quot;Finished def find_mode() with comments&quot;" />
-    <MESSAGE value="&quot;Finished Bag Class&quot;" />
-    <MESSAGE value="&quot;Corrected Bag Class after Gradescope 1&quot;" />
-    <MESSAGE value="&quot;Corrected Due Date&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected Due Date&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
