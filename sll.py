@@ -220,11 +220,11 @@ class LinkedList:
         :return: a SLL object
         """
         # Data validation
-        if start_index < 0 or start_index > self.length():
-            raise SLLException
+        if start_index < 0 or start_index > self.length() - 1:
+            raise SLLException("Invalid starting index.")
 
         if size < 0 or size > (self.length() - start_index):
-            raise SLLException
+            raise SLLException("Not enough nodes.")
 
         frontSentinel = self._head
         cur = frontSentinel                     # cur is always a node at index - 1 because it is the frontSentinel
@@ -237,7 +237,7 @@ class LinkedList:
             cur = cur.next
             counter += 1
 
-        # Inserts the values into a new SLL (starting from cur)
+        # Inserts the values into a new SLL (starting at cur)
         for _ in range(size):
             new_sll.insert_back(cur.next.value)
             cur = cur.next
