@@ -89,7 +89,11 @@ class Stack:
         :return: any Python object
 
         """
+        # Data validation
+        if self.is_empty():
+            raise StackException("The stack is empty.")
 
+        # Return item at the top of the stack
         return self._da[self.size() - 1]
 
 
