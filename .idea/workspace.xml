@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_07_24,_18_04_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_07_24__18_04__Changes_.xml" beforeDir="false" />
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack_sll.py" beforeDir="false" afterPath="$PROJECT_DIR$/stack_sll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queue_sll.py" beforeDir="false" afterPath="$PROJECT_DIR$/queue_sll.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +52,7 @@
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
     "Python.queue_sa.executor": "Run",
+    "Python.queue_sll.executor": "Run",
     "Python.sll.executor": "Run",
     "Python.stack_da.executor": "Run",
     "Python.stack_sll.executor": "Run",
@@ -63,7 +62,7 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.stack_sll">
+  <component name="RunManager">
     <configuration name="dynamic_array (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -176,8 +175,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.stack_sll" />
         <item itemvalue="Python.queue_sa" />
+        <item itemvalue="Python.stack_sll" />
         <item itemvalue="Python.sll" />
         <item itemvalue="Python.dynamic_array (1)" />
         <item itemvalue="Python.dynamic_array" />
@@ -288,7 +287,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721166870724</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="&quot;Finished Stack class implemented on SLL&quot;">
+      <option name="closed" value="true" />
+      <created>1721238775287</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1721238775287</updated>
+    </task>
+    <task id="LOCAL-00013" summary="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;">
+      <option name="closed" value="true" />
+      <created>1721238928936</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1721238928936</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,7 +327,9 @@
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;" />
     <MESSAGE value="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;" />
     <MESSAGE value="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;" />
+    <MESSAGE value="&quot;Finished Stack class implemented on SLL&quot;" />
+    <MESSAGE value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

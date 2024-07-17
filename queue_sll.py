@@ -1,9 +1,11 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 3
+# Due Date: Jul 21, 2024
+# Description: Create a Queue ADT Class and its methods, implemented
+#              using an SLL data structure.
+
 
 
 from SLNode import SLNode
@@ -64,21 +66,54 @@ class Queue:
 
     def enqueue(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Add an item at the end of a queue.
+
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+
+        new_node = SLNode(value)
+
+        if self.is_empty():
+            self._head = new_node
+            self._tail = new_node
+        else:
+            self._tail.next = new_node
+            self._tail = new_node
 
     def dequeue(self) -> object:
         """
-        TODO: Write this implementation
+        Removes and returns the item at the front of the queue
+
+        :param: none:
+
+        :return: any Python object
         """
-        pass
+        # Check if queue is empty:
+        if self.is_empty():
+            raise QueueException
+
+        # Removes and returns the head item of the queue
+        val = self._head.value
+        self._head = self._head.next
+        return val
 
     def front(self) -> object:
         """
-        TODO: Write this implementation
+        Returns the item at the front of the queue.
+
+        :param: none
+
+        :return: any Python object
         """
-        pass
+
+        # Check for empty queue
+        if self.is_empty():
+            raise QueueException
+
+        # Return front item at the queue
+        return self._head.value
 
 
 # ------------------- BASIC TESTING -----------------------------------------

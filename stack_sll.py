@@ -111,7 +111,7 @@ class Stack:
         if self.is_empty():
             raise StackException
 
-        # Return top item from the stack
+        # Return top item at the stack
         return self._head.value
 
 
