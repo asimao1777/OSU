@@ -1,9 +1,10 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 3
+# Due Date: Jul 21, 2024
+# Description: Create a Stack ADT Class and its methods, implemented
+#              using an SLL data structure.
 
 
 from SLNode import SLNode
@@ -14,7 +15,9 @@ class StackException(Exception):
     Custom exception to be used by Stack class
     DO NOT CHANGE THIS METHOD IN ANY WAY
     """
-    pass
+
+
+pass
 
 
 class Stack:
@@ -63,21 +66,54 @@ class Stack:
 
     def push(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Adds an item to the top of the stack.
+
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+
+        new_node = SLNode(value)
+
+        if self.is_empty():
+            self._head = new_node
+        else:
+            new_node.next = self._head
+            self._head = new_node
 
     def pop(self) -> object:
         """
-        TODO: Write this implementation
+        Removes and returns the item at the top of the stack.
+
+        :param: none
+
+        :return: any Python object
         """
-        pass
+        # Check for empty stack
+        if self.is_empty():
+            raise StackException
+
+        # Remove and return top item from the stack
+        val = self._head.value
+        self._head = self._head.next
+        return val
 
     def top(self) -> object:
         """
-        TODO: Write this implementation
+        Returns the item at the top of the stack.
+
+        :param: none
+
+        :return: any Python object
         """
-        pass
+
+        # Check for empty stack
+        if self.is_empty():
+            raise StackException
+
+        # Return top item from the stack
+        return self._head.value
+
 
 # ------------------- BASIC TESTING -----------------------------------------
 
