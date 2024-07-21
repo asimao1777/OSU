@@ -1,9 +1,9 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 04
+# Due Date: Jul 29, 2024
+# Description: Creation of a Binary Search Tree class.
 
 
 import random
@@ -154,15 +154,47 @@ class BST:
 
     def add(self, value: object) -> None:
         """
-        TODO: Write your implementation
+        Adds a node to a BST.
+
+        :param value: any Python obejct
+
+        :return: does not return
         """
-        pass
+        # Creates a new BSTNode object with parameter value before adding to BST
+        new_node = BSTNode(value)
+
+        # If BST is empty, creates root with 1st BSTNode
+        if self._root is None:
+            self._root = new_node
+            return
+
+        # Every addition starts checking from root
+        cur = self._root                      # cur acts as a pointer to parent node in each subtree or None
+
+        # Adds node to BST interactively
+        while cur is not None:
+            if value < cur.value:
+                if cur.left is None:
+                    cur.left = new_node
+                    return
+                cur = cur.left                # if cur has a left child, cur becomes cur.left to point to next parent
+            else:
+                if cur.right is None:
+                    cur.right = new_node
+                    return
+                cur = cur.right               # if cur has a right child, cur becomes cur.right to point to next parent
 
     def remove(self, value: object) -> bool:
         """
         TODO: Write your implementation
         """
-        pass
+
+        remove_node = BSTNode(value)
+        if self._remove_no_subtrees(remove_node):
+            return True
+        else:
+            return False
+
 
     # Consider implementing methods that handle different removal scenarios; #
     # you may find that you're able to use some of them in the AVL.          #
@@ -170,12 +202,35 @@ class BST:
     # Remove these method stubs if you decide not to use them.               #
     # Change these methods in any way you'd like.                            #
 
-    def _remove_no_subtrees(self, remove_parent: BSTNode, remove_node: BSTNode) -> None:
+    def _remove_no_subtrees(self, remove_node: BSTNode) -> None:
         """
-        TODO: Write your implementation
+        Removes a leaf node from a BST.
+
+        :param remove_node: a BSTNode
+
+        :return: does not return
         """
-        # remove node that has no subtrees (no left or right nodes)
-        pass
+
+        cur = self._root
+
+        if self._root.value == remove_node.value:
+            return
+
+        while cur is not None:
+            if remove_node.value < cur.value:
+                if cur.left.value == remove_node.value:
+                    if cur.left.left is None and cur.left.right is None:
+                        cur.left = None
+                        return
+                else:
+                    cur = cur.left
+            else:
+                if cur.right.value == remove_node.value:
+                    if cur.right.left is None and cur.right.right is None:
+                        cur.right = None
+                        return
+                else:
+                    cur = cur.right
 
     def _remove_one_subtree(self, remove_parent: BSTNode, remove_node: BSTNode) -> None:
         """
@@ -277,22 +332,22 @@ if __name__ == '__main__':
             raise Exception("PROBLEM WITH ADD OPERATION")
     print('add() stress test finished')
 
-    print("\nPDF - method remove() example 1")
-    print("-------------------------------")
-    test_cases = (
-        ((1, 2, 3), 1),
-        ((1, 2, 3), 2),
-        ((1, 2, 3), 3),
-        ((50, 40, 60, 30, 70, 20, 80, 45), 0),
-        ((50, 40, 60, 30, 70, 20, 80, 45), 45),
-        ((50, 40, 60, 30, 70, 20, 80, 45), 40),
-        ((50, 40, 60, 30, 70, 20, 80, 45), 30),
-    )
-    for case, del_value in test_cases:
-        tree = BST(case)
-        print('INPUT  :', tree, "DEL:", del_value)
-        tree.remove(del_value)
-        print('RESULT :', tree)
+    # print("\nPDF - method remove() example 1")
+    # print("-------------------------------")
+    # test_cases = (
+    #     ((1, 2, 3), 1),
+    #     ((1, 2, 3), 2),
+    #     ((1, 2, 3), 3),
+    #     ((50, 40, 60, 30, 70, 20, 80, 45), 0),
+    #     ((50, 40, 60, 30, 70, 20, 80, 45), 45),
+    #     ((50, 40, 60, 30, 70, 20, 80, 45), 40),
+    #     ((50, 40, 60, 30, 70, 20, 80, 45), 30),
+    # )
+    # for case, del_value in test_cases:
+    #     tree = BST(case)
+    #     print('INPUT  :', tree, "DEL:", del_value)
+    #     tree.remove(del_value)
+    #     print('RESULT :', tree)
 
     print("\nPDF - method remove() example 2")
     print("-------------------------------")
