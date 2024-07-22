@@ -156,7 +156,7 @@ class BST:
         """
         Adds a node to a BST.
 
-        :param value: any Python obejct
+        :param value: any Python object
 
         :return: does not return
         """
@@ -186,7 +186,11 @@ class BST:
 
     def remove(self, value: object) -> bool:
         """
-        TODO: Write your implementation
+        Removes a node from a BST.
+
+        :param value: any Python object
+
+        :return: a boolean (True if a node was removed correctly from the BST, False otherwise)
         """
 
         remove_node = BSTNode(value)
@@ -194,13 +198,6 @@ class BST:
             return True
         else:
             return False
-
-
-    # Consider implementing methods that handle different removal scenarios; #
-    # you may find that you're able to use some of them in the AVL.          #
-    # Remove these comments.                                                 #
-    # Remove these method stubs if you decide not to use them.               #
-    # Change these methods in any way you'd like.                            #
 
     def _remove_no_subtrees(self, remove_node: BSTNode) -> None:
         """
@@ -232,12 +229,37 @@ class BST:
                 else:
                     cur = cur.right
 
-    def _remove_one_subtree(self, remove_parent: BSTNode, remove_node: BSTNode) -> None:
+    def _remove_one_subtree(self, remove_node: BSTNode) -> None:
         """
-        TODO: Write your implementation
+        Removes a node with one child node, either left or right.
+
+        :param remove_node: a BSTNode object
+
+        :return: does not return
+
         """
         # remove node that has a left or right subtree (only)
-        pass
+
+        cur = self._root
+
+        if self._root.value == remove_node.value:
+            return
+
+        while cur is not None:
+            if remove_node.value < cur.value:
+                if cur.left.value == remove_node.value:
+                    if cur.left.left is None and cur.left.right is None:
+                        cur.left = None
+                        return
+                else:
+                    cur = cur.left
+            else:
+                if cur.right.value == remove_node.value:
+                    if cur.right.left is None and cur.right.right is None:
+                        cur.right = None
+                        return
+                else:
+                    cur = cur.right
 
     def _remove_two_subtrees(self, remove_parent: BSTNode, remove_node: BSTNode) -> None:
         """
