@@ -199,7 +199,7 @@ class BST:
 
         # self._root, deleted = self._remove_rec(self._root, value)
         # return deleted
-    def _remove_rec(self, node: BSTNode, value) -> tuple:
+    def _remove_rec(self, node: BSTNode) -> tuple:
         """
         Removes a leaf node from a BST recursively.
 
@@ -210,7 +210,7 @@ class BST:
 
         # BST is empty or root is None:
         if node is None:
-            return False, node
+            return node, False
 
         # Finds the node and removes it
         if value < node.value:
