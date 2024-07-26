@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/CS261.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS261.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_07_24__17_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_07_24__17_06__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected remove method &quot;">
       <change beforePath="$PROJECT_DIR$/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -307,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721238928936</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="&quot;Corrected remove method &quot;">
+      <option name="closed" value="true" />
+      <created>1722000793119</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722000793119</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,7 +337,8 @@
     <MESSAGE value="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;" />
     <MESSAGE value="&quot;Finished Stack class implemented on SLL&quot;" />
     <MESSAGE value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
+    <MESSAGE value="&quot;Corrected remove method &quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected remove method &quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
