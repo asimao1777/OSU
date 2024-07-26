@@ -220,8 +220,7 @@ class BST:
         # Case 1: Remove a leaf (no left or right child) and a node with 1 child
         else:
             if node.right is None and node.left is None:
-                node = None
-                return node, True
+                return
             elif node.right is None:
                 return node.left, True
             elif node.left is None:
