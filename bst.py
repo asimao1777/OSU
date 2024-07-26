@@ -194,6 +194,7 @@ class BST:
         """
         node = self._root
         node, is_removed = self._remove_rec(node, value)
+        self._root = node
         return is_removed
 
         # self._root, deleted = self._remove_rec(self._root, value)
@@ -206,6 +207,7 @@ class BST:
 
         :return: does not return
         """
+
         # BST is empty or root is None:
         if node is None:
             return False, node
@@ -330,22 +332,22 @@ if __name__ == '__main__':
             raise Exception("PROBLEM WITH ADD OPERATION")
     print('add() stress test finished')
 
-    # print("\nPDF - method remove() example 1")
-    # print("-------------------------------")
-    # test_cases = (
-    #     ((1, 2, 3), 1),
-    #     ((1, 2, 3), 2),
-    #     ((1, 2, 3), 3),
-    #     ((50, 40, 60, 30, 70, 20, 80, 45), 0),
-    #     ((50, 40, 60, 30, 70, 20, 80, 45), 45),
-    #     ((50, 40, 60, 30, 70, 20, 80, 45), 40),
-    #     ((50, 40, 60, 30, 70, 20, 80, 45), 30),
-    # )
-    # for case, del_value in test_cases:
-    #     tree = BST(case)
-    #     print('INPUT  :', tree, "DEL:", del_value)
-    #     tree.remove(del_value)
-    #     print('RESULT :', tree)
+    print("\nPDF - method remove() example 1")
+    print("-------------------------------")
+    test_cases = (
+        ((1, 2, 3), 1),
+        ((1, 2, 3), 2),
+        ((1, 2, 3), 3),
+        ((50, 40, 60, 30, 70, 20, 80, 45), 0),
+        ((50, 40, 60, 30, 70, 20, 80, 45), 45),
+        ((50, 40, 60, 30, 70, 20, 80, 45), 40),
+        ((50, 40, 60, 30, 70, 20, 80, 45), 30),
+    )
+    for case, del_value in test_cases:
+        tree = BST(case)
+        print('INPUT  :', tree, "DEL:", del_value)
+        tree.remove(del_value)
+        print('RESULT :', tree)
 
     print("\nPDF - method remove() example 2")
     print("-------------------------------")

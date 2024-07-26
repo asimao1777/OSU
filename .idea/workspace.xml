@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected remove method &quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected remove method - rev 2&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +49,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.assignment1.executor": "Run",
     "Python.bag_da.executor": "Run",
-    "Python.bst.executor": "Run",
+    "Python.bst.executor": "Debug",
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
     "Python.queue_sa.executor": "Run",
@@ -62,8 +63,8 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="dynamic_array (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.bst">
+    <configuration name="bst" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,7 +77,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dynamic_array.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bst.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bst" />
         <item itemvalue="Python.dynamic_array" />
         <item itemvalue="Python.queue_sa" />
         <item itemvalue="Python.stack_sll" />
         <item itemvalue="Python.sll" />
-        <item itemvalue="Python.dynamic_array (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722000793119</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="&quot;Corrected remove method - rev 2&quot;">
+      <option name="closed" value="true" />
+      <created>1722000901218</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1722000901218</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,7 +347,8 @@
     <MESSAGE value="&quot;Finished Stack class implemented on SLL&quot;" />
     <MESSAGE value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
     <MESSAGE value="&quot;Corrected remove method &quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected remove method &quot;" />
+    <MESSAGE value="&quot;Corrected remove method - rev 2&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected remove method - rev 2&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -353,6 +363,11 @@
           <line>172</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bst.py</url>
+          <line>194</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -365,13 +380,9 @@
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="max" />
-        <watch expression="self._sa" />
-        <watch expression="self._current_size" />
-        <watch expression="self._back" />
-        <watch expression="self._sa.length" />
-        <watch expression="self.size" />
-        <watch expression="self._front" />
         <watch expression="value" />
+        <watch expression="node.right" />
+        <watch expression="node.left" />
       </configuration>
     </watches-manager>
   </component>
