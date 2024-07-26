@@ -192,82 +192,61 @@ class BST:
 
         :return: a boolean (True if a node was removed correctly from the BST, False otherwise)
         """
+        node = self._root
+        node, is_removed = self._remove_rec(node, value)
+        return is_removed
 
-        remove_node = BSTNode(value)
-        if self._remove_no_subtrees(remove_node):
-            return True
-        else:
-            return False
-
-    def _remove_no_subtrees(self, remove_node: BSTNode) -> None:
+        # self._root, deleted = self._remove_rec(self._root, value)
+        # return deleted
+    def _remove_rec(self, node: BSTNode, value) -> tuple:
         """
-        Removes a leaf node from a BST.
+        Removes a leaf node from a BST recursively.
 
         :param remove_node: a BSTNode
 
         :return: does not return
         """
+        # BST is empty or root is None:
+        if node is None:
+            return False, node
 
-        cur = self._root
+        # Finds the node and removes it
+        if value < node.value:
+            node.left, is_removed = self._remove_rec(node.left, value)
 
-        if self._root.value == remove_node.value:
-            return
+        elif value > node.value:
+            node.right, is_removed = self._remove_rec(node.right, value)
 
-        while cur is not None:
-            if remove_node.value < cur.value:
-                if cur.left.value == remove_node.value:
-                    if cur.left.left is None and cur.left.right is None:
-                        cur.left = None
-                        return
-                else:
-                    cur = cur.left
-            else:
-                if cur.right.value == remove_node.value:
-                    if cur.right.left is None and cur.right.right is None:
-                        cur.right = None
-                        return
-                else:
-                    cur = cur.right
+        # Case 1: Remove a leaf (no left or right child) and a node with 1 child
+        else:
+            if node.right is None and node.left is None:
+                node = None
+                return node, True
+            elif node.right is None:
+                return node.left, True
+            elif node.left is None:
+                return node.right, True
 
-    def _remove_one_subtree(self, remove_node: BSTNode) -> None:
+        # Case 2: Removes a node with 2 children (left and right)
+            min_val = self._minVal(node.right)
+            node.value = min_val.value
+            node.right, _ = self._remove_rec(node.right, min_val.value)
+            return node, True
+
+        return node, is_removed
+
+    def _minVal(self, node: BSTNode) -> object:
         """
-        Removes a node with one child node, either left or right.
+        Removes a node with one child node, either left or right recursively.
 
         :param remove_node: a BSTNode object
 
         :return: does not return
 
         """
-        # remove node that has a left or right subtree (only)
-
-        cur = self._root
-
-        if self._root.value == remove_node.value:
-            return
-
-        while cur is not None:
-            if remove_node.value < cur.value:
-                if cur.left.value == remove_node.value:
-                    if cur.left.left is None and cur.left.right is None:
-                        cur.left = None
-                        return
-                else:
-                    cur = cur.left
-            else:
-                if cur.right.value == remove_node.value:
-                    if cur.right.left is None and cur.right.right is None:
-                        cur.right = None
-                        return
-                else:
-                    cur = cur.right
-
-    def _remove_two_subtrees(self, remove_parent: BSTNode, remove_node: BSTNode) -> None:
-        """
-        TODO: Write your implementation
-        """
-        # remove node that has two subtrees
-        # need to find inorder successor and its parent (make a method!)
-        pass
+        while node.left:
+            node = node.left
+        return node
 
     def contains(self, value: object) -> bool:
         """

@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/CS261.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS261.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_24,_09_06_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_24__09_06__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_07_24__13_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_07_24__13_35__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst.py" afterDir="false" />
     </list>
@@ -26,18 +23,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;asimao1777&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/asimao1777/OSU&quot;,
-    &quot;accountId&quot;: &quot;fd3ed8d3-e528-4078-840c-503c6862e012&quot;
-  }
-}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -49,25 +34,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.assignment1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bag_da.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dynamic_array (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.dynamic_array.executor&quot;: &quot;Run&quot;,
-    &quot;Python.queue_sa.executor&quot;: &quot;Run&quot;,
-    &quot;Python.queue_sll.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sll.executor&quot;: &quot;Run&quot;,
-    &quot;Python.stack_da.executor&quot;: &quot;Run&quot;,
-    &quot;Python.stack_sll.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.assignment1.executor": "Run",
+    "Python.bst.executor": "Run",
+    "Python.dynamic_array (1).executor": "Run",
+    "Python.dynamic_array.executor": "Run",
+    "Python.queue_sa.executor": "Run",
+    "Python.sll.executor": "Run",
+    "Python.stack_da.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python.dynamic_array">
+}]]></component>
+  <component name="RunManager" selected="Python.bst">
+    <configuration name="bst" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS261" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bst.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="dynamic_array (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -112,28 +116,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="queue_sa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS261" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/queue_sa.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="sll" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -156,42 +138,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="stack_sll" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS261" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stack_sll.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.queue_sa" />
-        <item itemvalue="Python.stack_sll" />
+        <item itemvalue="Python.bst" />
+        <item itemvalue="Python.dynamic_array" />
         <item itemvalue="Python.sll" />
         <item itemvalue="Python.dynamic_array (1)" />
-        <item itemvalue="Python.dynamic_array" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -284,31 +243,7 @@
       <option name="project" value="LOCAL" />
       <updated>1720976717318</updated>
     </task>
-    <task id="LOCAL-00011" summary="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;">
-      <option name="closed" value="true" />
-      <created>1721166870724</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1721166870724</updated>
-    </task>
-    <task id="LOCAL-00012" summary="&quot;Finished Stack class implemented on SLL&quot;">
-      <option name="closed" value="true" />
-      <created>1721238775287</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1721238775287</updated>
-    </task>
-    <task id="LOCAL-00013" summary="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;">
-      <option name="closed" value="true" />
-      <created>1721238928936</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1721238928936</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -331,10 +266,7 @@
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished&quot;" />
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;" />
     <MESSAGE value="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;" />
-    <MESSAGE value="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;" />
-    <MESSAGE value="&quot;Finished Stack class implemented on SLL&quot;" />
-    <MESSAGE value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -345,9 +277,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/queue_sa.py</url>
-          <line>172</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/bst.py</url>
+          <line>194</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -361,13 +293,12 @@
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="max" />
-        <watch expression="self._sa" />
-        <watch expression="self._current_size" />
-        <watch expression="self._back" />
-        <watch expression="self._sa.length" />
-        <watch expression="self.size" />
-        <watch expression="self._front" />
-        <watch expression="value" />
+        <watch expression="self._root" />
+        <watch expression="node.value" />
+        <watch expression="node.left" />
+        <watch expression="is_removed" />
+        <watch expression="node.right" />
+        <watch expression="min_val" />
       </configuration>
     </watches-manager>
   </component>
