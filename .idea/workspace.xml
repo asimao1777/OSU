@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected remove method - rev 4&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected remove method - rev 5&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -335,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722003504766</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="&quot;Corrected remove method - rev 5&quot;">
+      <option name="closed" value="true" />
+      <created>1722003656566</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722003656566</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -365,7 +374,8 @@
     <MESSAGE value="&quot;Corrected remove method - rev 2&quot;" />
     <MESSAGE value="&quot;Corrected remove method - rev 3&quot;" />
     <MESSAGE value="&quot;Corrected remove method - rev 4&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected remove method - rev 4&quot;" />
+    <MESSAGE value="&quot;Corrected remove method - rev 5&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected remove method - rev 5&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -379,11 +389,6 @@
           <url>file://$PROJECT_DIR$/queue_sa.py</url>
           <line>172</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/bst.py</url>
-          <line>194</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

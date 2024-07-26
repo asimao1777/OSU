@@ -169,20 +169,22 @@ class BST:
             return
 
         # Every addition starts checking from root
-        cur = self._root                      # cur acts as a pointer to parent node in each subtree or None
+        cur = self._root                                    # cur acts as a pointer to parent node in each subtree
 
         # Adds node to BST interactively
         while cur is not None:
             if value < cur.value:
+                # if cur has a left child, cur becomes cur.left to point to next parent
                 if cur.left is None:
                     cur.left = new_node
                     return
-                cur = cur.left                # if cur has a left child, cur becomes cur.left to point to next parent
+                cur = cur.left
             else:
+                # if cur has a right child, cur becomes cur.right to point to next parent
                 if cur.right is None:
                     cur.right = new_node
                     return
-                cur = cur.right               # if cur has a right child, cur becomes cur.right to point to next parent
+                cur = cur.right
 
     def remove(self, value: object) -> bool:
         """
@@ -192,27 +194,29 @@ class BST:
 
         :return: a boolean (True if a node was removed correctly from the BST, False otherwise)
         """
-        node = self._root
-        node, is_removed = self._remove_rec(node, value)
-        self._root = node
+
+        node = self._root                                   # start the search for removal at tree root
+        node, is_removed = self._remove_rec(node, value)    # recursively finds and removes the node, if exists
+        self._root = node                                   # the new root of the tree or subtree is the returned node
+
         return is_removed
 
-        # self._root, deleted = self._remove_rec(self._root, value)
-        # return deleted
     def _remove_rec(self, node: BSTNode, value: object) -> tuple:
         """
-        Removes a leaf node from a BST recursively.
+        Helper method which finds and removes a leaf
+        node, a node with one child or 2 children
+        from a BST recursively.
 
-        :param remove_node: a BSTNode
+        :param node: a BSTNode
+        :param value: any Python object
 
         :return: does not return
         """
-
         # BST is empty or root is None:
         if node is None:
             return node, False
 
-        # Finds the node and removes it
+        # Finds the node traversing the BST
         if value < node.value:
             node.left, is_removed = self._remove_rec(node.left, value)
 
@@ -227,8 +231,10 @@ class BST:
                 return node.right, True
 
         # Case 2: Removes a node with 2 children (left and right)
-            min_val = self._minVal(node.right)
-            node.value = min_val.value
+            min_val = self._minVal(node.right)             # looks for the inorder success
+            node.value = min_val.value                     # replaces the value to be removed by the inorder successor
+
+            # Removes the inorder successor node once it replaced the removed node value
             node.right, _ = self._remove_rec(node.right, min_val.value)
             return node, True
 
@@ -236,13 +242,15 @@ class BST:
 
     def _minVal(self, node: BSTNode) -> object:
         """
-        Removes a node with one child node, either left or right recursively.
+        Helper method which finds the inorder successor
+        of a node with 2 children which will be removed from the BST
 
-        :param remove_node: a BSTNode object
+        :param node: a BSTNode object
 
         :return: does not return
 
         """
+        # Finds the lowest value node on the left of the node to be removed
         while node.left:
             node = node.left
         return node
