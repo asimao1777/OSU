@@ -257,9 +257,14 @@ class BST:
 
     def contains(self, value: object) -> bool:
         """
-        TODO: Write your implementation
+        Looks for the existence of a node in a BST.
+
+        :param value: any Python object
+
+        :return: a Boolean (True if the node value exists in a BST, False otherwise)
         """
-        pass
+
+
 
     def inorder_traversal(self) -> Queue:
         """
