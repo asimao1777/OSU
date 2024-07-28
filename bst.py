@@ -257,18 +257,34 @@ class BST:
 
     def contains(self, value: object) -> bool:
         """
-        Looks for the existence of a node in a BST.
+        Looks for the existence of a value into a node in a BST.
 
         :param value: any Python object
 
         :return: a Boolean (True if the node value exists in a BST, False otherwise)
         """
+        # Empty BST
+        if self._root is None:
+            return False
 
+        cur = self._root
 
+        # Looks for the node containing the value iteratively.
+        while value != cur.value:
+            if value < cur.value:
+                if cur.left is None:
+                    return False
+                cur = cur.left
+            else:
+                if value > cur.value:
+                    if cur.right is None:
+                        return False
+                    cur = cur.right
+        return True
 
     def inorder_traversal(self) -> Queue:
         """
-        TODO: Write your implementation
+        Performs an inorder traversal of the tree.
         """
         pass
 
