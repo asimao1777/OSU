@@ -285,8 +285,29 @@ class BST:
     def inorder_traversal(self) -> Queue:
         """
         Performs an inorder traversal of the tree.
+
+        :param: an instance of a BST class.
+
+        :return: an instance of a queue (with the values of the visited nodes)
         """
-        pass
+        # Helper inside method to allow for the creation of the queue before recursion
+        def _inorder_traversal_rec(node):
+
+            if node is not None:
+                _inorder_traversal_rec(node.left)           # when reached "None" returns nothing and continues code
+                final_queue.enqueue(node.value)             # Because left subtree reached "None", adds last node value
+                _inorder_traversal_rec(node.right)          # when reaches "None" returns nothing
+
+        final_queue = Queue()
+
+        # Check if BST is empty
+        if self._root is None:
+            return final_queue
+
+        # Traverses BST inorder recursively
+        _inorder_traversal_rec(self._root)
+
+        return final_queue
 
     def find_min(self) -> object:
         """

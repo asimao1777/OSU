@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Begin contain method of BST&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Contain Method&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_07_24,_13_35_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_07_24__13_35__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst.py" afterDir="false" />
     </list>
@@ -360,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722039782670</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="&quot;Finished Contain Method&quot;">
+      <option name="closed" value="true" />
+      <created>1722131215921</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1722131215921</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,7 +403,8 @@
     <MESSAGE value="&quot;Corrected remove method - rev 5&quot;" />
     <MESSAGE value="&quot;Corrected remove method - fixed description and comments&quot;" />
     <MESSAGE value="&quot;Begin contain method of BST&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Begin contain method of BST&quot;" />
+    <MESSAGE value="&quot;Finished Contain Method&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Finished Contain Method&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -408,11 +419,6 @@
           <line>172</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/bst.py</url>
-          <line>266</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -426,12 +432,10 @@
       <configuration name="PythonConfigurationType">
         <watch expression="max" />
         <watch expression="value" />
-        <watch expression="cur.left" />
-        <watch expression="cur.right" />
         <watch expression="self._root" />
-        <watch expression="is_contained" />
-        <watch expression="cur.right.value" />
-        <watch expression="cur.left.value" />
+        <watch expression="node.left" />
+        <watch expression="node.value" />
+        <watch expression="node.right" />
       </configuration>
     </watches-manager>
   </component>
