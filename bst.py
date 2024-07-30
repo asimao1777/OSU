@@ -311,27 +311,64 @@ class BST:
 
     def find_min(self) -> object:
         """
-        TODO: Write your implementation
+        Finds the lowest value in a BST.
+
+        :param: an instance of the BST class.
+
+        :return: any Python object
         """
-        pass
+        # Check if BST is empty
+        if self._root is None:
+            return None
+
+        # Finds smallest value
+        queue = self.inorder_traversal()
+        return queue._data[0]
 
     def find_max(self) -> object:
         """
-        TODO: Write your implementation
+        Finds the highest value in a BST.
+
+        :param: an instance of the BST class.
+
+        :return: any Python object
         """
-        pass
+        # Check if BST is empty
+        if self._root is None:
+            return None
+
+        # Finds smallest value
+        queue = self.inorder_traversal()
+        return queue._data[-1]
 
     def is_empty(self) -> bool:
         """
-        TODO: Write your implementation
+        Checks if the BST is empty.
+
+        :param: an instance of the BST class.
+
+        :return: a boolean (True if it is empty, False otherwise)
+
         """
-        pass
+        if self._root is None:
+            return True
+        return False
 
     def make_empty(self) -> None:
         """
-        TODO: Write your implementation
+        Removes all nodes from a BST.
+
+        :param: an instance of the BST class.
+
+        :return: does not return
         """
-        pass
+
+        if self.is_empty():
+            return
+
+        self._root.right = None
+        self._root.left = None
+
 
 
 # ------------------- BASIC TESTING -----------------------------------------
