@@ -363,11 +363,10 @@ class BST:
         :return: does not return
         """
 
-        if self.is_empty():
-            return
+        if self._root is None:
+            return None
+        self._root = None
 
-        self._root.right = None
-        self._root.left = None
 
 # ------------------- BASIC TESTING -----------------------------------------
 
