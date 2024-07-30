@@ -337,7 +337,7 @@ class BST:
         if self._root is None:
             return None
 
-        # Finds smallest value
+        # Finds largest value
         queue = self.inorder_traversal()
         return queue._data[-1]
 
@@ -368,8 +368,6 @@ class BST:
 
         self._root.right = None
         self._root.left = None
-
-
 
 # ------------------- BASIC TESTING -----------------------------------------
 
