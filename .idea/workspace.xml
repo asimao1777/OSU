@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;BST - finish all bst.py methods - corrected for descriptions&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Contain Method&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/avl.py" beforeDir="false" afterPath="$PROJECT_DIR$/avl.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;asimao1777&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/asimao1777/OSU&quot;,
+    &quot;accountId&quot;: &quot;fd3ed8d3-e528-4078-840c-503c6862e012&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -36,18 +48,45 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.assignment1.executor": "Run",
+    "Python.avl.executor": "Run",
+    "Python.bag_da.executor": "Run",
     "Python.bst.executor": "Run",
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
     "Python.queue_sa.executor": "Run",
+    "Python.queue_sll.executor": "Run",
     "Python.sll.executor": "Run",
     "Python.stack_da.executor": "Run",
+    "Python.stack_sll.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true"
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.bst">
+  <component name="RunManager" selected="Python.avl">
+    <configuration name="avl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS261" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/avl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="bst" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -62,28 +101,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bst.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="dynamic_array (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS261" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dynamic_array.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -114,7 +131,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sll" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="queue_sa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,7 +144,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sll.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/queue_sa.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stack_sll" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS261" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stack_sll.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,17 +177,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.avl" />
         <item itemvalue="Python.bst" />
         <item itemvalue="Python.dynamic_array" />
-        <item itemvalue="Python.sll" />
-        <item itemvalue="Python.dynamic_array (1)" />
+        <item itemvalue="Python.queue_sa" />
+        <item itemvalue="Python.stack_sll" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -241,23 +281,95 @@
       <option name="project" value="LOCAL" />
       <updated>1720976717318</updated>
     </task>
-    <task id="LOCAL-00011" summary="&quot;BST - finish all bst.py methods&quot;">
+    <task id="LOCAL-00011" summary="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;">
       <option name="closed" value="true" />
-      <created>1722337723420</created>
+      <created>1721166870724</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1722337723420</updated>
+      <updated>1721166870724</updated>
     </task>
-    <task id="LOCAL-00012" summary="&quot;BST - finish all bst.py methods - corrected for descriptions&quot;">
+    <task id="LOCAL-00012" summary="&quot;Finished Stack class implemented on SLL&quot;">
       <option name="closed" value="true" />
-      <created>1722337773056</created>
+      <created>1721238775287</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1722337773056</updated>
+      <updated>1721238775287</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;">
+      <option name="closed" value="true" />
+      <created>1721238928936</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1721238928936</updated>
+    </task>
+    <task id="LOCAL-00014" summary="&quot;Corrected remove method &quot;">
+      <option name="closed" value="true" />
+      <created>1722000793119</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722000793119</updated>
+    </task>
+    <task id="LOCAL-00015" summary="&quot;Corrected remove method - rev 2&quot;">
+      <option name="closed" value="true" />
+      <created>1722000901218</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1722000901218</updated>
+    </task>
+    <task id="LOCAL-00016" summary="&quot;Corrected remove method - rev 3&quot;">
+      <option name="closed" value="true" />
+      <created>1722001786091</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1722001786091</updated>
+    </task>
+    <task id="LOCAL-00017" summary="&quot;Corrected remove method - rev 4&quot;">
+      <option name="closed" value="true" />
+      <created>1722003504766</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1722003504766</updated>
+    </task>
+    <task id="LOCAL-00018" summary="&quot;Corrected remove method - rev 5&quot;">
+      <option name="closed" value="true" />
+      <created>1722003656566</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722003656566</updated>
+    </task>
+    <task id="LOCAL-00019" summary="&quot;Corrected remove method - fixed description and comments&quot;">
+      <option name="closed" value="true" />
+      <created>1722005071764</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1722005071764</updated>
+    </task>
+    <task id="LOCAL-00020" summary="&quot;Begin contain method of BST&quot;">
+      <option name="closed" value="true" />
+      <created>1722039782670</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722039782670</updated>
+    </task>
+    <task id="LOCAL-00021" summary="&quot;Finished Contain Method&quot;">
+      <option name="closed" value="true" />
+      <created>1722131215921</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1722131215921</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,9 +392,18 @@
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished&quot;" />
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;" />
     <MESSAGE value="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;" />
-    <MESSAGE value="&quot;BST - finish all bst.py methods&quot;" />
-    <MESSAGE value="&quot;BST - finish all bst.py methods - corrected for descriptions&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;BST - finish all bst.py methods - corrected for descriptions&quot;" />
+    <MESSAGE value="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;" />
+    <MESSAGE value="&quot;Finished Stack class implemented on SLL&quot;" />
+    <MESSAGE value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
+    <MESSAGE value="&quot;Corrected remove method &quot;" />
+    <MESSAGE value="&quot;Corrected remove method - rev 2&quot;" />
+    <MESSAGE value="&quot;Corrected remove method - rev 3&quot;" />
+    <MESSAGE value="&quot;Corrected remove method - rev 4&quot;" />
+    <MESSAGE value="&quot;Corrected remove method - rev 5&quot;" />
+    <MESSAGE value="&quot;Corrected remove method - fixed description and comments&quot;" />
+    <MESSAGE value="&quot;Begin contain method of BST&quot;" />
+    <MESSAGE value="&quot;Finished Contain Method&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Finished Contain Method&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -293,9 +414,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/bst.py</url>
-          <line>196</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/queue_sa.py</url>
+          <line>172</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -309,9 +430,11 @@
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="max" />
+        <watch expression="value" />
         <watch expression="self._root" />
-        <watch expression="self._root.right" />
-        <watch expression="self._root.left" />
+        <watch expression="node.left" />
+        <watch expression="node.value" />
+        <watch expression="node.right" />
       </configuration>
     </watches-manager>
   </component>

@@ -1,10 +1,9 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
-
+# Assignment: 04
+# Due Date: Jul 29, 2024
+# Description: Creation of an AVL class.
 
 import random
 from queue_and_stack import Queue, Stack
@@ -97,75 +96,192 @@ class AVL(BST):
                 stack.push(node.left)
         return True
 
-    # ------------------------------------------------------------------ #
-
     def add(self, value: object) -> None:
         """
-        TODO: Write your implementation
+        Adds a new value to the tree while maintaining AVL property
+
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+        if self._root is None:
+            self._root = AVLNode(value)
+        else:
+            self._root = self._add_recursive(self._root, value)
+
+    def _add_recursive(self, node: AVLNode, value: object) -> AVLNode:
+        if node is None:
+            return AVLNode(value)
+
+        if value < node.value:
+            node.left = self._add_recursive(node.left, value)
+            node.left.parent = node
+        elif value > node.value:
+            node.right = self._add_recursive(node.right, value)
+            node.right.parent = node
+        else:
+            # Duplicate value, do nothing
+            return node
+
+        self._update_height(node)
+        return self._rebalance(node)
 
     def remove(self, value: object) -> bool:
         """
-        TODO: Write your implementation
-        """
-        pass
+        Removes a value from the tree while maintaining AVL property
 
-    # Experiment and see if you can use the optional                         #
-    # subtree removal methods defined in the BST here in the AVL.            #
-    # Call normally using self -> self._remove_no_subtrees(parent, node)     #
-    # You need to override the _remove_two_subtrees() method in any case.    #
-    # Remove these comments.                                                 #
-    # Remove these method stubs if you decide not to use them.               #
-    # Change this method in any way you'd like.                              #
+        :param value: any Python object
 
-    def _remove_two_subtrees(self, remove_parent: AVLNode, remove_node: AVLNode) -> AVLNode:
+        :return: True if the value was removed, False otherwise
         """
-        TODO: Write your implementation
-        """
-        pass
+        if self._root is None:
+            return False
 
-    # It's highly recommended to implement                          #
-    # the following methods for balancing the AVL Tree.             #
-    # Remove these comments.                                        #
-    # Remove these method stubs if you decide not to use them.      #
-    # Change these methods in any way you'd like.                   #
+        self._root, deleted = self._remove_recursive(self._root, value)
+        return deleted
+
+    def _remove_recursive(self, node: AVLNode, value: object) -> (AVLNode, bool):
+        if node is None:
+            return node, False
+
+        if value < node.value:
+            node.left, deleted = self._remove_recursive(node.left, value)
+        elif value > node.value:
+            node.right, deleted = self._remove_recursive(node.right, value)
+        else:
+            deleted = True
+            if node.left is None:
+                return node.right, deleted
+            elif node.right is None:
+                return node.left, deleted
+
+            temp = self._get_min_node(node.right)
+            node.value = temp.value
+            node.right, _ = self._remove_recursive(node.right, temp.value)
+
+        if not deleted:
+            return node, deleted
+
+        self._update_height(node)
+        return self._rebalance(node), deleted
+
+    def _get_min_node(self, node: AVLNode) -> AVLNode:
+        current = node
+        while current.left is not None:
+            current = current.left
+        return current
 
     def _balance_factor(self, node: AVLNode) -> int:
         """
-        TODO: Write your implementation
+        Calculates the balance factor
+
+        :param node: an AVLNode instance
+
+        :return: an integer
         """
-        pass
+        left_height = node.left.height if node.left else -1
+        right_height = node.right.height if node.right else -1
+        return right_height - left_height
 
     def _get_height(self, node: AVLNode) -> int:
         """
-        TODO: Write your implementation
+        Returns the height of a node
+
+        :param node: an AVLNode instance
+
+        :return: an integer
         """
-        pass
+        if not node:
+            return -1
+        return node.height
 
     def _rotate_left(self, node: AVLNode) -> AVLNode:
         """
-        TODO: Write your implementation
+        Simple rotates R-R imbalanced subtrees.
+
+        :param node: an AVLNode instance (node for which the rotation is centered)
+
+        :returns: an AVLNode instance (the new parent node for a balanced subtree)
         """
-        pass
+        new_parent = node.right
+        node.right = new_parent.left
+        if node.right is not None:
+            node.right.parent = node
+        new_parent.left = node
+        new_parent.parent = node.parent
+        if node.parent is None:
+            self._root = new_parent
+        else:
+            if node.parent.left == node:
+                node.parent.left = new_parent
+            else:
+                node.parent.right = new_parent
+        node.parent = new_parent
+        self._update_height(node)
+        self._update_height(new_parent)
+        return new_parent
 
     def _rotate_right(self, node: AVLNode) -> AVLNode:
         """
-        TODO: Write your implementation
+        Simple rotates L-L imbalanced subtrees.
+
+        :param node: an AVLNode instance (node for which the rotation is centered)
+
+        :returns: an AVLNode instance (the new parent node for a balanced subtree)
         """
-        pass
+        new_parent = node.left
+        node.left = new_parent.right
+        if node.left is not None:
+            node.left.parent = node
+        new_parent.right = node
+        new_parent.parent = node.parent
+        if node.parent is None:
+            self._root = new_parent
+        else:
+            if node.parent.left == node:
+                node.parent.left = new_parent
+            else:
+                node.parent.right = new_parent
+        node.parent = new_parent
+        self._update_height(node)
+        self._update_height(new_parent)
+        return new_parent
 
     def _update_height(self, node: AVLNode) -> None:
         """
-        TODO: Write your implementation
-        """
-        pass
+        Updates the height of the AVLNode whose subtree was restructured.
 
-    def _rebalance(self, node: AVLNode) -> None:
+         :param node: an AVLNode instance.
+
+        :returns: does not return
         """
-        TODO: Write your implementation
+        left_height = node.left.height if node.left else -1
+        right_height = node.right.height if node.right else -1
+        node.height = 1 + max(left_height, right_height)
+
+    def _rebalance(self, node: AVLNode) -> AVLNode:
         """
-        pass
+        Rebalances an imbalanced subtree(s) after the insert or removal of an AVL node.
+
+        :param node: an AVLNode instance
+
+        :return: the new root of the balanced subtree
+        """
+        balance = self._balance_factor(node)
+
+        if balance < -1:
+            if self._balance_factor(node.left) > 0:
+                node.left = self._rotate_left(node.left)
+            node = self._rotate_right(node)
+        elif balance > 1:
+            if self._balance_factor(node.right) < 0:
+                node.right = self._rotate_right(node.right)
+            node = self._rotate_left(node)
+
+        self._update_height(node)
+        return node
+
+
 
 # ------------------- BASIC TESTING -----------------------------------------
 
