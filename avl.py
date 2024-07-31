@@ -256,26 +256,34 @@ class AVL(BST):
 
         :returns: an AVLNode instance (the new parent node for a balanced subtree)
         """
+        # Sets the new parent node and reassigns the right child of current node
         new_parent = node.right
         node.right = new_parent.left
 
+        # Updates the parent of the new right child and reassigns left child of new parent
         if node.right is not None:
             node.right.parent = node
         new_parent.left = node
-        new_parent.parent = node.parent
+        # Updates the parent of the new parent node
+        new_parent.parent = node.parent        # the parent of the new parent is set to the parent of the current node
 
+        # Updates root if applicable and links new parent with the correct subtree of its parent
         if node.parent is None:
             self._root = new_parent
         else:
+            # Updates the parent's left or right child to be the new parent
             if node.parent.left == node:
                 node.parent.left = new_parent
             else:
                 node.parent.right = new_parent
 
+        # Updates the parent of the current node
+        node.parent = new_parent               # sets the parent of the current node to be the new parent
 
-        node.parent = new_parent
+        # Updates the heights of the nodes
         self._update_height(node)
         self._update_height(new_parent)
+
         return new_parent
 
     def _rotate_right(self, node: AVLNode) -> AVLNode:
@@ -286,22 +294,34 @@ class AVL(BST):
 
         :returns: an AVLNode instance (the new parent node for a balanced subtree)
         """
+        # Sets the new parent node and reassigns the left child of current node
         new_parent = node.left
         node.left = new_parent.right
+
+        # Updates the parent of the new left child and reassigns right child of new parent
         if node.left is not None:
             node.left.parent = node
         new_parent.right = node
-        new_parent.parent = node.parent
+        # Updates the parent of the new parent node
+        new_parent.parent = node.parent         # the parent of the new parent is set to the parent of the current node
+
+        # Updates root if applicable and links new parent with the correct subtree of its parent
         if node.parent is None:
             self._root = new_parent
         else:
+            # Updates the parent's left or right child to be the new parent
             if node.parent.left == node:
                 node.parent.left = new_parent
             else:
                 node.parent.right = new_parent
+
+        # Updates the parent of the current node
         node.parent = new_parent
-        self._update_height(node)
+
+        # Updates the heights of the nodes
+        self._update_height(node)               # sets the parent of the current node to be the new parent
         self._update_height(new_parent)
+
         return new_parent
 
     def _update_height(self, node: AVLNode) -> None:
@@ -336,19 +356,24 @@ class AVL(BST):
         """
         balance = self._balance_factor(node)
 
+        # Checks if the tree is imbalanced and re-balances it
         if balance < -1:
+            # Left-Right imbalance
             if self._balance_factor(node.left) > 0:
                 node.left = self._rotate_left(node.left)
+            # Left-Left imbalance
             node = self._rotate_right(node)
         elif balance > 1:
+            # Right-Left imbalance
             if self._balance_factor(node.right) < 0:
                 node.right = self._rotate_right(node.right)
+            # Right-Right imbalance
             node = self._rotate_left(node)
 
+        # Updates the height of the node
         self._update_height(node)
+
         return node
-
-
 
 # ------------------- BASIC TESTING -----------------------------------------
 

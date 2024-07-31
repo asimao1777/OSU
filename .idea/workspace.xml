@@ -7,7 +7,6 @@
     <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Contain Method&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/avl.py" beforeDir="false" afterPath="$PROJECT_DIR$/avl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +188,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
