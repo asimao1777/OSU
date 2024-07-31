@@ -104,27 +104,40 @@ class AVL(BST):
 
         :return: does not return
         """
-        if self._root is None:
-            self._root = AVLNode(value)
-        else:
-            self._root = self._add_recursive(self._root, value)
+        new_node = AVLNode(value)
 
-    def _add_recursive(self, node: AVLNode, value: object) -> AVLNode:
+        # Check of Tree is empty
+        if self._root is None:
+            self._root = new_node                          # empty tree, new node is the only node (tree is balanced)
+        else:
+            self._root = self._add_rec(self._root, value)  # tree is not empty, add node, re-balance from bottom-up
+
+    def _add_rec(self, node: AVLNode, value: object) -> AVLNode:
+        """
+        Helper method to adds a new value to the tree and re-balancing the tree
+        from bottom to top following the same path down.
+
+        :param node: an AVLNode instance (root of the tree or a subtree)
+        :param value: any Python object
+
+        :return: an AVLNode instance
+        """
+        # Checks if the tree is empty
         if node is None:
             return AVLNode(value)
 
+        # Add node to the tree keeping BST property
         if value < node.value:
-            node.left = self._add_recursive(node.left, value)
+            node.left = self._add_rec(node.left, value)
             node.left.parent = node
         elif value > node.value:
-            node.right = self._add_recursive(node.right, value)
+            node.right = self._add_rec(node.right, value)
             node.right.parent = node
         else:
-            # Duplicate value, do nothing
-            return node
+            return node                                    # if the value exists in the tree, do nothing and return
 
-        self._update_height(node)
-        return self._rebalance(node)
+        self._update_height(node)                          # updates the height of the node
+        return self._rebalance(node)                       # re-balances the BST to ensure AVL property and return
 
     def remove(self, value: object) -> bool:
         """
@@ -134,42 +147,73 @@ class AVL(BST):
 
         :return: True if the value was removed, False otherwise
         """
-        if self._root is None:
-            return False
 
-        self._root, deleted = self._remove_recursive(self._root, value)
-        return deleted
+        node = self._root                                   # start the search for removal at tree root
+        node, is_removed = self._remove_rec(node, value)    # recursively finds and removes the node, if exists
+        self._root = node                                   # the new root of the tree or subtree is the returned node
 
-    def _remove_recursive(self, node: AVLNode, value: object) -> (AVLNode, bool):
+        return is_removed
+
+    def _remove_rec(self, node: AVLNode, value: object) -> tuple:
+        """
+        Helper method which finds and removes a leaf
+        node, a node with one child or 2 children
+        from a BST, recursively, updates the node height,
+        and re-balances the BST to
+        maintain AVL property.
+
+        :param node: an AVLNode instance
+        :param value: any Python object
+
+        :return: does not return
+        """
+        # BST is empty or root is None:
         if node is None:
             return node, False
 
+        # Finds the node traversing the BST
         if value < node.value:
-            node.left, deleted = self._remove_recursive(node.left, value)
+            node.left, is_removed = self._remove_rec(node.left, value)
+
         elif value > node.value:
-            node.right, deleted = self._remove_recursive(node.right, value)
+            node.right, is_removed = self._remove_rec(node.right, value)
+
+        # Case 1: Remove a leaf (no left or right child) and a node with 1 child
         else:
-            deleted = True
-            if node.left is None:
-                return node.right, deleted
-            elif node.right is None:
-                return node.left, deleted
+            is_removed = True
+            if node.right is None:
+                return node.left, is_removed
+            elif node.left is None:
+                return node.right, is_removed
 
-            temp = self._get_min_node(node.right)
-            node.value = temp.value
-            node.right, _ = self._remove_recursive(node.right, temp.value)
+            # Case 2: Removes a node with 2 children (left and right)
+            min_val = self._minVal(node.right)              # looks for the inorder success
+            node.value = min_val.value                      # replaces the value to be removed by the inorder successor
 
-        if not deleted:
-            return node, deleted
+            # Removes the inorder successor node after it replaced the removed node value
+            node.right, _ = self._remove_rec(node.right, min_val.value)
 
-        self._update_height(node)
-        return self._rebalance(node), deleted
+            # Checks if the node was not removed and returns if not
+            if not is_removed:
+                return node, is_removed
 
-    def _get_min_node(self, node: AVLNode) -> AVLNode:
-        current = node
-        while current.left is not None:
-            current = current.left
-        return current
+        self._update_height(node)                          # updates the height of the node
+        return self._rebalance(node), is_removed           # re-balances the BST to ensure AVL property and return
+
+    def _minVal(self, node: AVLNode) -> AVLNode:
+        """
+        Helper method which finds the inorder successor
+        of a node with 2 children which will be removed from the BST
+
+        :param node: a AVLNode instance
+
+        :return: does not return
+
+        """
+        # Finds the lowest value node on the left of the node to be removed
+        while node.left is not None:
+            node = node.left
+        return node
 
     def _balance_factor(self, node: AVLNode) -> int:
         """
@@ -178,9 +222,18 @@ class AVL(BST):
         :param node: an AVLNode instance
 
         :return: an integer
+
         """
-        left_height = node.left.height if node.left else -1
-        right_height = node.right.height if node.right else -1
+        if node.left:
+            left_height = node.left.height
+        else:
+            left_height = -1
+
+        if node.right:
+            right_height = node.right.height
+        else:
+            right_height = -1
+
         return right_height - left_height
 
     def _get_height(self, node: AVLNode) -> int:
@@ -205,10 +258,12 @@ class AVL(BST):
         """
         new_parent = node.right
         node.right = new_parent.left
+
         if node.right is not None:
             node.right.parent = node
         new_parent.left = node
         new_parent.parent = node.parent
+
         if node.parent is None:
             self._root = new_parent
         else:
@@ -216,6 +271,8 @@ class AVL(BST):
                 node.parent.left = new_parent
             else:
                 node.parent.right = new_parent
+
+
         node.parent = new_parent
         self._update_height(node)
         self._update_height(new_parent)
@@ -255,9 +312,19 @@ class AVL(BST):
 
         :returns: does not return
         """
-        left_height = node.left.height if node.left else -1
-        right_height = node.right.height if node.right else -1
-        node.height = 1 + max(left_height, right_height)
+        # Checks if node is a leaf (if a leaf height is -1)
+        if node.left is not None:
+            left_h = node.left.height
+        else:
+            left_h = -1
+
+        if node.right is not None:
+            right_h = node.right.height
+        else:
+            right_h = -1
+
+        # Updates the height of the node
+        node.height = 1 + max(left_h, right_h)
 
     def _rebalance(self, node: AVLNode) -> AVLNode:
         """

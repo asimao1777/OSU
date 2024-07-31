@@ -188,7 +188,7 @@ class BST:
 
     def remove(self, value: object) -> bool:
         """
-        Removes a node from a BST.
+        Removes a value from the tree while maintaining BST property.
 
         :param value: any Python object
 
@@ -205,9 +205,9 @@ class BST:
         """
         Helper method which finds and removes a leaf
         node, a node with one child or 2 children
-        from a BST recursively.
+        from a BST, recursively.
 
-        :param node: a BSTNode
+        :param node: a BSTNode instance
         :param value: any Python object
 
         :return: does not return
@@ -225,18 +225,22 @@ class BST:
 
         # Case 1: Remove a leaf (no left or right child) and a node with 1 child
         else:
+            is_removed = True
             if node.right is None:
-                return node.left, True
+                return node.left, is_removed
             elif node.left is None:
-                return node.right, True
+                return node.right, is_removed
 
-        # Case 2: Removes a node with 2 children (left and right)
+            # Case 2: Removes a node with 2 children (left and right)
             min_val = self._minVal(node.right)             # looks for the inorder success
             node.value = min_val.value                     # replaces the value to be removed by the inorder successor
 
-            # Removes the inorder successor node once it replaced the removed node value
+            # Removes the inorder successor node after it replaced the removed node value
             node.right, _ = self._remove_rec(node.right, min_val.value)
-            return node, True
+
+            # Checks if the node was not removed and returns if not
+            if not is_removed:
+                return node, is_removed
 
         return node, is_removed
 
@@ -245,7 +249,7 @@ class BST:
         Helper method which finds the inorder successor
         of a node with 2 children which will be removed from the BST
 
-        :param node: a BSTNode object
+        :param node: a BSTNode instance
 
         :return: does not return
 

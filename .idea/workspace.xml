@@ -7,6 +7,7 @@
     <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Contain Method&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/avl.py" beforeDir="false" afterPath="$PROJECT_DIR$/avl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bst.py" beforeDir="false" afterPath="$PROJECT_DIR$/bst.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,26 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.assignment1.executor": "Run",
-    "Python.avl.executor": "Run",
-    "Python.bag_da.executor": "Run",
-    "Python.bst.executor": "Run",
-    "Python.dynamic_array (1).executor": "Run",
-    "Python.dynamic_array.executor": "Run",
-    "Python.queue_sa.executor": "Run",
-    "Python.queue_sll.executor": "Run",
-    "Python.sll.executor": "Run",
-    "Python.stack_da.executor": "Run",
-    "Python.stack_sll.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.assignment1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.avl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bag_da.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bst.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dynamic_array (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.dynamic_array.executor&quot;: &quot;Run&quot;,
+    &quot;Python.queue_sa.executor&quot;: &quot;Run&quot;,
+    &quot;Python.queue_sll.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sll.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stack_da.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stack_sll.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.avl">
     <configuration name="avl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
@@ -188,7 +189,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
