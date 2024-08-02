@@ -317,6 +317,19 @@ class DynamicArray:
                 first_iter = reduce_func(first_iter, self._data[pos])
             return first_iter
 
+    def pop(self) -> None:
+        """
+        Removes the element at the end of the DynamicArray object
+
+        :param: a DynamicArray instance
+
+        :return: does not return
+
+        """
+        last_item_index = self._size - 1
+        self._data[last_item_index] = None
+        self._size -= 1
+
 
 def find_mode(arr: DynamicArray) -> tuple[DynamicArray, int]:
     """

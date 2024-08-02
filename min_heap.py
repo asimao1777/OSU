@@ -1,9 +1,9 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 04
+# Due Date: Jul 26, 2024
+# Description: Creation of an MinHeap class.
 
 
 from dynamic_array import *
@@ -41,9 +41,31 @@ class MinHeap:
 
     def add(self, node: object) -> None:
         """
-        TODO: Write this implementation
+        Adds a new object to the MinHeap while maintains heap properties.
+
+        :param node: any Python object
+
+        :return: does not return
         """
-        pass
+
+        heap = self._heap
+        heap.append(node)
+
+        index = heap.length() - 1
+        parent_index = (heap.length()-1) // 2
+
+        while heap[index] < heap[parent_index]:
+
+            if heap[parent_index] is None:
+                return
+            temp = heap[parent_index]
+            heap[parent_index] = heap[index]
+            heap[index] = temp
+            index = parent_index
+            if (index - 1) // 2 < 0:
+                index = 0
+            else:
+                parent_index = (index - 1) // 2 < 0
 
     def is_empty(self) -> bool:
         """
