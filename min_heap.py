@@ -76,9 +76,13 @@ class MinHeap:
 
     def get_min(self) -> object:
         """
-        TODO: Write this implementation
+        Returns the object with the minimum key in the heap.
+
+        :param: a MinHeap class object
+
+        :return: any Python object
         """
-        pass
+        return self._heap[0]
 
     def remove_min(self) -> object:
         """
@@ -154,11 +158,11 @@ if __name__ == '__main__':
     h = MinHeap()
     print(h.is_empty())
 
-    # print("\nPDF - get_min example 1")
-    # print("-----------------------")
-    # h = MinHeap(['fish', 'bird'])
-    # print(h)
-    # print(h.get_min(), h.get_min())
+    print("\nPDF - get_min example 1")
+    print("-----------------------")
+    h = MinHeap(['fish', 'bird'])
+    print(h)
+    print(h.get_min(), h.get_min())
     #
     # print("\nPDF - remove_min example 1")
     # print("--------------------------")
