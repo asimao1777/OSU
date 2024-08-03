@@ -47,26 +47,21 @@ class MinHeap:
 
         :return: does not return
         """
-
+        # Adds node to the last position in the min heap
         heap = self._heap
         heap.append(node)
 
+        # Calculates the index of the node added and its parent
         index = heap.length() - 1
-        parent_index = (heap.length()-1) // 2
+        parent_index = (index - 1) // 2
 
-        while heap[index] < heap[parent_index]:
-
-            if heap[parent_index] is None:
-                return
+        # Percolates up the min heap to keep heap property
+        while index > 0 and heap[index] < heap[parent_index]:
             temp = heap[parent_index]
             heap[parent_index] = heap[index]
             heap[index] = temp
             index = parent_index
-            if (index - 1) // 2 < 0:
-                index = 0
-            else:
-                parent_index = (index - 1) // 2
-
+            parent_index = (index - 1) // 2
 
     def is_empty(self) -> bool:
         """
