@@ -104,22 +104,22 @@ class MinHeap:
         last = self._heap[size - 1]
         self._heap[0], last = last, self._heap[0]
         self._heap.pop()
-        self._percolate_down(0)
+        self._percolate_down(0, size - 1)
 
         return min
 
-    def _percolate_down(self, index: int) -> None:
+    def _percolate_down(self, index: int, size: int) -> None:
         """
         Helper method which percolates down a minHeap
         keeping min heap property.
 
         :param index: an integer (index of the parent item)
+        :param size: an integer (size of an array)
 
         :return: does not return
         """
 
         heap = self._heap
-        size = self._heap.length()
 
         # Percolates down the min heap to keep heap property
         while True:                                   # all if's below are False or last if is True, loop finishes
@@ -164,7 +164,7 @@ class MinHeap:
 
         # Builds the heap
         while index >= 0:
-            self._percolate_down(index)
+            self._percolate_down(index, size)
             index -= 1
 
     def size(self) -> int:
@@ -189,12 +189,29 @@ class MinHeap:
         """
         self._heap = DynamicArray()
 
-
 def heapsort(da: DynamicArray) -> None:
     """
-    TODO: Write this implementation
+    Sorts items of a DynamicArray object in non-ascending order.
+
+    :param da: a DynamicArray class object
+
+    :return: does not return
     """
-    pass
+
+    # Creates a MinHeap instance and builds the heap
+    hp = MinHeap()
+    hp.build_heap(da)
+
+    # Loops through the heap and sorts it in un-ascending order
+    size = da.length() - 1
+    while size > 0:
+        hp._heap[0], hp._heap[size] = hp._heap[size], hp._heap[0]
+        hp._percolate_down(0, size)
+        size -= 1
+
+    # Copies the sorted items from the heap back into the array
+    for index in range(da.length()):
+        da[index] = hp._heap[index]
 
 # ------------------- BASIC TESTING -----------------------------------------
 
@@ -275,16 +292,16 @@ if __name__ == '__main__':
     print(h.clear())
     print(h)
     #
-    # print("\nPDF - heapsort example 1")
-    # print("------------------------")
-    # da = DynamicArray([100, 20, 6, 200, 90, 150, 300])
-    # print(f"Before: {da}")
-    # heapsort(da)
-    # print(f"After:  {da}")
-    #
-    # print("\nPDF - heapsort example 2")
-    # print("------------------------")
-    # da = DynamicArray(['monkey', 'zebra', 'elephant', 'horse', 'bear'])
-    # print(f"Before: {da}")
-    # heapsort(da)
-    # print(f"After:  {da}")
+    print("\nPDF - heapsort example 1")
+    print("------------------------")
+    da = DynamicArray([100, 20, 6, 200, 90, 150, 300])
+    print(f"Before: {da}")
+    heapsort(da)
+    print(f"After:  {da}")
+
+    print("\nPDF - heapsort example 2")
+    print("------------------------")
+    da = DynamicArray(['monkey', 'zebra', 'elephant', 'horse', 'bear'])
+    print(f"Before: {da}")
+    heapsort(da)
+    print(f"After:  {da}")
