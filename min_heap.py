@@ -88,9 +88,18 @@ class MinHeap:
 
     def remove_min(self) -> object:
         """
-        TODO: Write this implementation
+        Returns and removes the object with the minimum key in the
+        heap.
+
+        :param: a MinHeap class object
+
+        :return: any Python object
         """
-        pass
+        min = self.get_min()
+        self._heap[0], self._heap[self._heap.length() - 1] = self._heap[self._heap.length() - 1], self._heap[0]
+        self._heap.pop()
+        # self._percolate_down(self._heap, self._heap.get_min())
+        return min
 
     def build_heap(self, da: DynamicArray) -> None:
         """
@@ -100,15 +109,28 @@ class MinHeap:
 
     def size(self) -> int:
         """
-        TODO: Write this implementation
+        Returns the number of items stored in a min heap.
+
+        :param node: a MinHeap class object
+
+        :return: does not return
+
         """
-        pass
+        return self._heap.length()
 
     def clear(self) -> None:
         """
-        TODO: Write this implementation
+        Clears the contents of the heap.
+
+        :param node: a MinHeap class object
+
+        :return: does not return
+
         """
-        pass
+        if self.is_empty():
+            return self._heap
+        self._heap = MinHeap()
+        return self._heap
 
 
 def heapsort(da: DynamicArray) -> None:
@@ -191,22 +213,22 @@ if __name__ == '__main__':
     # if h.get_min() == 500:
     #     print("Error: input array and heap's underlying DA reference same object in memory")
     #
-    # print("\nPDF - size example 1")
-    # print("--------------------")
-    # h = MinHeap([100, 20, 6, 200, 90, 150, 300])
-    # print(h.size())
+    print("\nPDF - size example 1")
+    print("--------------------")
+    h = MinHeap([100, 20, 6, 200, 90, 150, 300])
+    print(h.size())
+
+    print("\nPDF - size example 2")
+    print("--------------------")
+    h = MinHeap([])
+    print(h.size())
     #
-    # print("\nPDF - size example 2")
-    # print("--------------------")
-    # h = MinHeap([])
-    # print(h.size())
-    #
-    # print("\nPDF - clear example 1")
-    # print("---------------------")
-    # h = MinHeap(['monkey', 'zebra', 'elephant', 'horse', 'bear'])
-    # print(h)
-    # print(h.clear())
-    # print(h)
+    print("\nPDF - clear example 1")
+    print("---------------------")
+    h = MinHeap(['monkey', 'zebra', 'elephant', 'horse', 'bear'])
+    print(h)
+    print(h.clear())
+    print(h)
     #
     # print("\nPDF - heapsort example 1")
     # print("------------------------")
