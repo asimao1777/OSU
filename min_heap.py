@@ -127,10 +127,7 @@ class MinHeap:
         :return: does not return
 
         """
-        if self.is_empty():
-            return self._heap
-        self._heap = None
-        return self._heap
+        self._heap = DynamicArray()
 
 
 def heapsort(da: DynamicArray) -> None:
