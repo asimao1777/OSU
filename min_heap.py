@@ -82,6 +82,8 @@ class MinHeap:
 
         :return: any Python object
         """
+        if self.is_empty():
+            return self._heap
         return self._heap[0]
 
     def remove_min(self) -> object:
@@ -164,12 +166,12 @@ if __name__ == '__main__':
     print(h)
     print(h.get_min(), h.get_min())
     #
-    # print("\nPDF - remove_min example 1")
-    # print("--------------------------")
-    # h = MinHeap([1, 10, 2, 9, 3, 8, 4, 7, 5, 6])
-    # while not h.is_empty() and h.is_empty() is not None:
-    #     print(h, end=' ')
-    #     print(h.remove_min())
+    print("\nPDF - remove_min example 1")
+    print("--------------------------")
+    h = MinHeap([1, 10, 2, 9, 3, 8, 4, 7, 5, 6])
+    while not h.is_empty() and h.is_empty() is not None:
+        print(h, end=' ')
+        print(h.remove_min())
     #
     # print("\nPDF - build_heap example 1")
     # print("--------------------------")
