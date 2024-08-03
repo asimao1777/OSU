@@ -129,7 +129,7 @@ class MinHeap:
         """
         if self.is_empty():
             return self._heap
-        self._heap = MinHeap()
+        self._heap = None
         return self._heap
 
 
