@@ -83,7 +83,7 @@ class MinHeap:
         :return: any Python object
         """
         if self.is_empty():
-            return self._heap
+            raise MinHeapException
         return self._heap[0]
 
     def remove_min(self) -> object:
