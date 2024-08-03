@@ -95,11 +95,53 @@ class MinHeap:
 
         :return: any Python object
         """
+
+        if self._heap.is_empty():
+            raise MinHeapException
+
+        size = self._heap.length()
         min = self.get_min()
-        self._heap[0], self._heap[self._heap.length() - 1] = self._heap[self._heap.length() - 1], self._heap[0]
+        last = self._heap[size - 1]
+        self._heap[0], last = last, self._heap[0]
         self._heap.pop()
-        # self._percolate_down(self._heap, self._heap.get_min())
+        self._percolate_down(0)
+
         return min
+
+    def _percolate_down(self, index: int) -> None:
+        """
+        Helper method which percolates down a minHeap
+        keeping min heap property.
+
+        :param index: an integer (index of the parent item)
+
+        :return: does not return
+        """
+
+        heap = self._heap
+        size = self._heap.length()
+
+        # Percolates down the min heap to keep heap property
+        while True:                                   # all if's below are False or last if is True, loop finishes
+            left_child = index * 2 + 1                # index of left child in the array
+            right_child = index * 2 + 2               # index of right child in the array
+            min = index
+
+            # checks if left child exists and is smaller than parent
+            if left_child < size and heap[left_child] < heap[min]:
+                min = left_child                      # if yes, min becomes left child index
+
+            # checks if right child exists and is smaller than parent (if conditional above is False) or left child
+            if right_child < size and heap[right_child] < heap[min]:
+                min = right_child                     # if yes, min becomes right child index
+
+            # checks if parent is smaller than left and right child
+            if min == index:                          # if yes, all above are False and index = min
+                return                                # breaks out the loop
+
+            # swap places with the smallest child
+            heap[index], heap[min] = heap[min], heap[index]
+            index = min
 
     def build_heap(self, da: DynamicArray) -> None:
         """
@@ -141,11 +183,6 @@ def heapsort(da: DynamicArray) -> None:
 # helper function for percolating elements down the MinHeap. You can call    #
 # this from inside the MinHeap class. You may edit the function definition.  #
 
-def _percolate_down(da: DynamicArray, parent: int) -> None:
-    """
-    TODO: Write your implementation
-    """
-    pass
 
 
 # ------------------- BASIC TESTING -----------------------------------------
