@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;size and clear methods - min heap - final - test5&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/min_heap.py" beforeDir="false" afterPath="$PROJECT_DIR$/min_heap.py" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
     "Python.bst.executor": "Run",
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
-    "Python.min_heap.executor": "Debug",
+    "Python.min_heap.executor": "Run",
     "Python.queue_sa.executor": "Run",
     "Python.queue_sll.executor": "Run",
     "Python.sll.executor": "Run",
@@ -442,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722702788608</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;">
+      <option name="closed" value="true" />
+      <created>1722711557588</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1722711557588</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel - corrected error on Data Validation upon Gradescope fail on Slice method&quot;" />
     <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel - corrected another error on Data Validation upon Gradescope fail on Slice method - 2nd submission&quot;" />
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished&quot;" />
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;" />
@@ -483,7 +490,8 @@
     <MESSAGE value="&quot;size and clear methods - min heap - final - test3&quot;" />
     <MESSAGE value="&quot;size and clear methods - min heap - final - test4&quot;" />
     <MESSAGE value="&quot;size and clear methods - min heap - final - test5&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;size and clear methods - min heap - final - test5&quot;" />
+    <MESSAGE value="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -500,8 +508,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/min_heap.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="14" />
+          <line>155</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

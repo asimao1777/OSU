@@ -145,9 +145,27 @@ class MinHeap:
 
     def build_heap(self, da: DynamicArray) -> None:
         """
-        TODO: Write this implementation
+        Builds a min heap from an unsorted DynamicArray object
+
+        :param da: DynamicArray class object
+
+        :return: does not return
+
         """
-        pass
+        # Clears the current heap
+        self.clear()
+
+        # Copies items from the DynamicArray passed as a parameter into the empty heap
+        for index in range(da.length()):
+            self._heap.append(da[index])
+
+        size = self._heap.length()
+        index = (size - 1) // 2
+
+        # Builds the heap
+        while index >= 0:
+            self._percolate_down(index)
+            index -= 1
 
     def size(self) -> int:
         """
@@ -177,13 +195,6 @@ def heapsort(da: DynamicArray) -> None:
     TODO: Write this implementation
     """
     pass
-
-
-# It's highly recommended that you implement the following optional          #
-# helper function for percolating elements down the MinHeap. You can call    #
-# this from inside the MinHeap class. You may edit the function definition.  #
-
-
 
 # ------------------- BASIC TESTING -----------------------------------------
 
@@ -229,24 +240,24 @@ if __name__ == '__main__':
         print(h, end=' ')
         print(h.remove_min())
     #
-    # print("\nPDF - build_heap example 1")
-    # print("--------------------------")
-    # da = DynamicArray([100, 20, 6, 200, 90, 150, 300])
-    # h = MinHeap(['zebra', 'apple'])
-    # print(h)
-    # h.build_heap(da)
-    # print(h)
-    #
-    # print("--------------------------")
-    # print("Inserting 500 into input DA:")
-    # da[0] = 500
-    # print(da)
-    #
-    # print("Your MinHeap:")
-    # print(h)
-    # if h.get_min() == 500:
-    #     print("Error: input array and heap's underlying DA reference same object in memory")
-    #
+    print("\nPDF - build_heap example 1")
+    print("--------------------------")
+    da = DynamicArray([100, 20, 6, 200, 90, 150, 300])
+    h = MinHeap(['zebra', 'apple'])
+    print(h)
+    h.build_heap(da)
+    print(h)
+
+    print("--------------------------")
+    print("Inserting 500 into input DA:")
+    da[0] = 500
+    print(da)
+
+    print("Your MinHeap:")
+    print(h)
+    if h.get_min() == 500:
+        print("Error: input array and heap's underlying DA reference same object in memory")
+
     print("\nPDF - size example 1")
     print("--------------------")
     h = MinHeap([100, 20, 6, 200, 90, 150, 300])
