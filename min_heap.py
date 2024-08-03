@@ -65,7 +65,8 @@ class MinHeap:
             if (index - 1) // 2 < 0:
                 index = 0
             else:
-                parent_index = (index - 1) // 2 < 0
+                parent_index = (index - 1) // 2
+
 
     def is_empty(self) -> bool:
         """
