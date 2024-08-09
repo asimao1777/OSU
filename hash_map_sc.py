@@ -1,9 +1,10 @@
-# Name:
-# OSU Email:
+# Name: Andre Simao Osorio de Barros
+# OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: 06
+# Due Date: Jul 26, 2024
+# Description: Creation of an Hashmap class using chaining for collision resolution
+
 
 
 from a6_include import (DynamicArray, LinkedList,
@@ -102,50 +103,105 @@ class HashMap:
 
     def table_load(self) -> float:
         """
-        TODO: Write this implementation
+        Calculates and returns the current hash table load factor.
+
+        :param: a Hashmap object
+
+        :return: a float
         """
-        pass
+        return self.get_size() / self.get_capacity()
 
     def empty_buckets(self) -> int:
         """
-        TODO: Write this implementation
-        """
-        pass
+        Checks and returns the number of empty buckets in a HashMap instance.
 
-    def get(self, key: str):
+        :param: a Hashmap object
+
+        :return: an integer
         """
-        TODO: Write this implementation
+
+        count = 0
+        for index in range(self.get_capacity()):
+            if self._buckets[index].length() == 0:
+                count += 1
+        return count
+
+    def get(self, key: str) -> object:
         """
-        pass
+        Finds the value associated to a key in a Hashmap object.
+
+        :param key: a Python string instance
+
+        :return: any Python object
+        """
+
+        hash_index = self._hash_function(key)
+
+        for index in range(self.get_capacity()):
+            if self._buckets[index] == hash_index:
+                return self._buckets[index].length[hash_index]
+            return None
 
     def contains_key(self, key: str) -> bool:
         """
-        TODO: Write this implementation
+        Checks if a key passed as a parameter exists in a Hashmap object
+
+        :param key: a Python string instance.
+
+        :return: a Boolean (True if the key is in the Hashmap object, False otherwise).
         """
-        pass
+
+        if self.get(key):
+            return True
+        return False
 
     def remove(self, key: str) -> None:
         """
-        TODO: Write this implementation
+        Removes the key passed as parameter and its associated value from the Hashmap object.
+
+        :param key: a Python string instance.
+
+        :return: does not return
         """
-        pass
+
+        hash_index = self._hash_function(key)
+
+        for index in range(self.get_capacity()):
+            if self._buckets[index] == hash_index:
+                self._buckets[index].remove[hash_index]
 
     def get_keys_and_values(self) -> DynamicArray:
         """
-        TODO: Write this implementation
+        Traverses a Hashmap object and retrieves keys/values tuples stored in it.
+
+        :param: a Hashmap object.
+
+        :return: DynamicArrays instances containing tuples of keys/values
         """
-        pass
+        final_array = DynamicArray()
+        for index in range(self.get_capacity()):
+            for key_value in range(self._buckets.get_at_index(index).length()):
+                key, value = self._buckets.get_at_index(index).key, self._buckets.get_at_index(index).value
+                each_tuple = (key, value)
+                final_array.append(each_tuple)
+        return final_array
 
     def clear(self) -> None:
         """
-        TODO: Write this implementation
-        """
-        pass
+        Clears the contents of a Hashmap object without changing its capacity.
 
+        :param key: a Hashmap object
+
+        :return: does not return
+        """
+
+        for index in range(self.get_capacity()):
+            self._buckets.append(LinkedList())
 
 def find_mode(da: DynamicArray) -> tuple[DynamicArray, int]:
     """
-    TODO: Write this implementation
+
+
     """
     # if you'd like to use a hash map,
     # use this instance of your Separate Chaining HashMap
