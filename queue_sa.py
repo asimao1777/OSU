@@ -96,38 +96,76 @@ class Queue:
 
         :return: does not return
         """
-        if self._current_size == self._sa._size:
+        # Double static array capacity if reached end of array
+        if self._sa.length() == self._current_size and self._current_size != 0:
             self._double_queue()
 
-        self[self._current_size] = value
+        # Adds item to the back of the queue
+        pos = (self._back + 1) % self._sa.length()              # modulus operation takes care of the circular buffer
+        self._sa[pos] = value
+        self._back = self._increment(self._back)                # after item added, back pointer moves to next slot
         self._current_size += 1
 
     def dequeue(self) -> object:
         """
-        TODO: Write this implementation
+        Removes and returns a item from the beginning of the queue.
+
+        :param: none
+
+        :return: any Python object
         """
-        pass
+        # Check for empty queue
+        if self.is_empty():
+            raise QueueException
+
+        # Removes and returns item removed from front of the queue
+        val = self._sa[self._front]
+        self._front = (self._front+1) % self._sa.length()       # after item removed, front pointer moves to next slot
+        self._current_size -= 1
+
+        return val
 
     def front(self) -> object:
         """
-        TODO: Write this implementation
+        Returns a item from the beginning of the queue.
+
+        :param: none
+
+        :return: any Python object
         """
-        pass
+        # Check for empty queue
+        if self.is_empty():
+            raise QueueException
+
+        # Removes and returns item removed from front of the queue
+        val = self._sa[self._front]
+        return val
 
     # The method below is optional, but recommended, to implement. #
     # You may alter it in any way you see fit.                     #
 
     def _double_queue(self) -> StaticArray:
         """
-        TODO: Write this implementation
+        Creates a new Static Array with twice the capacity of the current array object
+         when it is full.
+
+         :param: none
+
+         :return: a StaticArray object
         """
         new_size = self._current_size * 2
         new_sa = StaticArray(new_size)
 
+        # Move items from previous array to new array & correct wraparound indexes (move front to index 0 and so on)
         for index in range(self._current_size):
-            new_sa[index] = self._sa[index]
+            new_sa[index] = self._sa[(self._front + index) % self._sa.length()]
 
-        return new_sa
+        # Important to set all pointers to the original positions after extension (correct wraparound indexes)
+        self._sa = new_sa
+        self._front = 0                                     # wraparound indexes are corrected, hence front = 0
+        self._back = self._current_size - 1                 # back pointer is equal to last item of original array
+
+        return self._sa
 
 
 # ------------------- BASIC TESTING -----------------------------------------
