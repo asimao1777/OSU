@@ -228,10 +228,10 @@ class HashMap:
         """
         final_array = DynamicArray()
         for index in range(self.get_capacity()):
-            for key_value in range(self._buckets.get_at_index(index).length()):
-                key, value = self._buckets.get_at_index(index).key, self._buckets.get_at_index(index).value
-                each_tuple = (key, value)
-                final_array.append(each_tuple)
+            node = self._buckets[index]._head
+            for sll_index in range(self._buckets[index].length()):
+                key_val = (node.key, node.value)
+                final_array.append(key_val)
         return final_array
 
     def clear(self) -> None:

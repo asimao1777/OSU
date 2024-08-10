@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Updating the queue_sa file&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Trying to correct the resize_table method again&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
@@ -491,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723300466665</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="&quot;Trying to correct the resize_table method again&quot;">
+      <option name="closed" value="true" />
+      <created>1723301519891</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1723301519891</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +515,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Finished Stack class implemented on SLL&quot;" />
     <MESSAGE value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
     <MESSAGE value="&quot;Corrected remove method &quot;" />
     <MESSAGE value="&quot;Corrected remove method - rev 2&quot;" />
@@ -532,7 +539,8 @@
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values - corrected method contains_key&quot;" />
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values - corrected method resize_table&quot;" />
     <MESSAGE value="&quot;Updating the queue_sa file&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Updating the queue_sa file&quot;" />
+    <MESSAGE value="&quot;Trying to correct the resize_table method again&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Trying to correct the resize_table method again&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
