@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Hash_map_sc methods done until get keys and values - corrected method resize_table&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Updating the queue_sa file&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue_sa.py" beforeDir="false" afterPath="$PROJECT_DIR$/queue_sa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -483,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723298050247</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="&quot;Updating the queue_sa file&quot;">
+      <option name="closed" value="true" />
+      <created>1723300466665</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1723300466665</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -499,7 +507,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;" />
     <MESSAGE value="&quot;Finished Stack class implemented on SLL&quot;" />
     <MESSAGE value="&quot;Corrected top method on Stack class implemented with DA - included exception&quot;" />
     <MESSAGE value="&quot;Corrected remove method &quot;" />
@@ -524,7 +531,8 @@
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values&quot;" />
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values - corrected method contains_key&quot;" />
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values - corrected method resize_table&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Hash_map_sc methods done until get keys and values - corrected method resize_table&quot;" />
+    <MESSAGE value="&quot;Updating the queue_sa file&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Updating the queue_sa file&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

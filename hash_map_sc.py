@@ -125,6 +125,9 @@ class HashMap:
         if new_capacity < 1:
             return
 
+        if new_capacity < 2:
+            new_capacity = 2
+
         # Saves the current buckets and create a new dynamic array with the new capacity
         old_buckets = self._buckets
         self._capacity = self._next_prime(new_capacity)
