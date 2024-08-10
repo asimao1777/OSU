@@ -248,14 +248,49 @@ class HashMap:
             self._buckets[index] = LinkedList()
         self._size = 0
 
+
 def find_mode(da: DynamicArray) -> tuple[DynamicArray, int]:
     """
+    Determines the mode or modes for and its frequency from a DynamicArray object.
 
+    :param da: DynamicArray object
 
+    :return: a tuple with a DynamicArray object and an integer
     """
-    # if you'd like to use a hash map,
-    # use this instance of your Separate Chaining HashMap
-    map = HashMap()
+    # Checks if array is empty
+    if da.length() == 0:
+        return DynamicArray(), 0
+
+    freq_map = HashMap()
+
+    # Populates the Hashmap
+    for index in range(da.length()):
+        key = da[index]
+        if freq_map.contains_key(key):
+            count = freq_map.get(key)
+            freq_map.put(key, count + 1)
+        else:
+            freq_map.put(key, 1)
+
+    # Finds the maximum frequency (max)
+    max = 0
+    for index in range(freq_map.get_capacity()):
+        node = freq_map._buckets[index]._head
+        while node is not None:
+            if node.value > max:
+                max = node.value
+            node = node.next
+
+    # Compares each key/value in the Hashmap and when value is equal to max adds it to array
+    mode = DynamicArray()
+    for index in range(freq_map.get_capacity()):
+        node = freq_map._buckets[index]._head
+        while node is not None:
+            if node.value == max:
+                mode.append(node.key)
+            node = node.next
+
+    return mode, max
 
 
 # ------------------- BASIC TESTING ---------------------------------------- #
