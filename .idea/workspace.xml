@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected resize table for Gradescope - 6.&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected resize table for Gradescope - 7.&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
     "Python.bst.executor": "Run",
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
-    "Python.hash_map_sc.executor": "Run",
+    "Python.hash_map_sc.executor": "Debug",
     "Python.min_heap.executor": "Run",
     "Python.queue_sa.executor": "Run",
     "Python.queue_sll.executor": "Run",
@@ -202,14 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720180214489</updated>
-    </task>
-    <task id="LOCAL-00004" summary="&quot;All SSL methods finished - w/ Sentinel - corrected another error on Data Validation upon Gradescope fail on Slice method - 2nd submission&quot;">
-      <option name="closed" value="true" />
-      <created>1720973177751</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1720973177751</updated>
     </task>
     <task id="LOCAL-00005" summary="&quot;All Stack ADT (implemented with DA) methods finished&quot;">
       <option name="closed" value="true" />
@@ -595,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723319563628</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="&quot;Corrected resize table for Gradescope - 7.&quot;">
+      <option name="closed" value="true" />
+      <created>1723319906786</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1723319906786</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -611,7 +611,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;size and clear methods - min heap - final - test3&quot;" />
     <MESSAGE value="&quot;size and clear methods - min heap - final - test4&quot;" />
     <MESSAGE value="&quot;size and clear methods - min heap - final - test5&quot;" />
     <MESSAGE value="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;" />
@@ -636,7 +635,8 @@
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 4.&quot;" />
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 5.&quot;" />
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 6.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected resize table for Gradescope - 6.&quot;" />
+    <MESSAGE value="&quot;Corrected resize table for Gradescope - 7.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected resize table for Gradescope - 7.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

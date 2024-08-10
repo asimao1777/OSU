@@ -3,13 +3,10 @@
 # Course: CS261 - Data Structures
 # Assignment: 06
 # Due Date: Aug 13, 2024
-# Description: Creation of an Hashmap class using chaining for collision resolution
+# Description: Creation of a Hashmap class using chaining for collision resolution
 
 
-
-from a6_include import (DynamicArray, LinkedList,
-                        hash_function_1, hash_function_2)
-
+from a6_include import (DynamicArray, LinkedList, hash_function_1, hash_function_2)
 
 class HashMap:
     def __init__(self,
@@ -121,46 +118,27 @@ class HashMap:
 
         :return: does not return
         """
-        # if new_capacity < 1:
-        #    return
-        #
-        # if not self._is_prime(new_capacity):
-        #     new_capacity = self._next_prime(new_capacity)
-        #
-        # new_hash = HashMap(new_capacity, self._hash_function)
-        #
-        # for index in range(self.get_capacity()):
-        #     node = self._buckets[index]._head
-        #     while node is not None:
-        #         new_hash.put(node.key, node.value)
-        #         node = node.next
-        #
-        #     # Replace the old HashMap attributes with the new ones
-        # self._buckets = new_hash._buckets
-        # self._capacity = new_hash._capacity
+        # Checks if new capacity is below 1 anf if it is, do nothing
         if new_capacity < 1:
-            return
+           return
 
-            # Find the next prime number greater than or equal to new_capacity
-        new_capacity = self._next_prime(new_capacity)
+        # Checks if the new capacity is a prime number and if it is not adjust
+        if not self._is_prime(new_capacity):
+            new_capacity = self._next_prime(new_capacity)
 
-        # Create a new array of SLLs (empty buckets)
-        new_buckets = DynamicArray()
-        for _ in range(new_capacity):
-            new_buckets.append(LinkedList())
+        # Creates a new Hash table with the new capacity
+        new_hash = HashMap(new_capacity, self._hash_function)
 
-        # Rehash all elements in the current buckets
-        for i in range(self._buckets.length()):
-            current = self._buckets[i]._head
-            while current is not None:
-                # Recompute hash for the current element
-                new_index = self._hash_function(current.key) % new_capacity
-                new_buckets[new_index].insert(current.key, current.value)
-                current = current.next
+        # Transfers and rehashes key/values into new hash
+        for index in range(self.get_capacity()):
+            node = self._buckets[index]._head
+            while node is not None:
+                new_hash.put(node.key, node.value)
+                node = node.next
 
-        # Replace old buckets with new buckets
-        self._buckets = new_buckets
-        self._capacity = new_capacity
+        # Replaces the old HashMap attributes with the new ones
+        self._buckets = new_hash._buckets
+        self._capacity = new_hash._capacity
 
     def table_load(self) -> float:
         """
@@ -212,9 +190,13 @@ class HashMap:
 
         :return: a Boolean (True if the key is in the Hashmap object, False otherwise).
         """
-
+        # Applies hash function to capacity to get hash index
         hash_index = self._hash_function(key) % self.get_capacity()
+
+        # Selects the bucket which refers to calculated hash index
         cur_bucket = self._buckets[hash_index]
+
+        # Checks if key exists in the bucket and if it does, returns True.
         if cur_bucket.contains(key):
             return True
         return False
@@ -227,9 +209,13 @@ class HashMap:
 
         :return: does not return
         """
-
+        # Applies hash function to capacity to get hash index
         hash_index = self._hash_function(key) % self.get_capacity()
+
+        # Selects the bucket which refers to calculated hash index
         cur_bucket = self._buckets[hash_index]
+
+        # Checks if key exists in the bucket and if it does, removes it.
         if self.contains_key(key):
             cur_bucket.remove(key)
             self._size -= 1
@@ -243,12 +229,15 @@ class HashMap:
         :return: DynamicArrays instances containing tuples of keys/values
         """
         final_array = DynamicArray()
+
+        # Traverses each bucket, takes key/value pair from nodes and append to array.
         for index in range(self.get_capacity()):
             node = self._buckets[index]._head
             while node is not None:
                 key_val = (node.key, node.value)
                 final_array.append(key_val)
                 node = node.next
+
         return final_array
 
     def clear(self) -> None:
