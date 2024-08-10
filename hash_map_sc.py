@@ -121,30 +121,25 @@ class HashMap:
 
         :return: does not return
         """
-        # Checks if new capacity is at least 1, if it is less than 1 do nothing.
+        if new_capacity == 2:
+            new_capacity = 2
+
         if new_capacity >= 1:
-            # create a temporary hash map with new_capacity and same hash function as this object
-            temp = HashMap(new_capacity, self._hash_function)
+            if not self._is_prime(new_capacity):
+                new_capacity = self._next_prime(new_capacity)
 
-            # loop over the buckets of current hash map
-            for index in range(self.get_capacity()):
-                bucket = self._buckets.get_at_index(index)  # each linked list of the hash map
+        new_hash = HashMap(new_capacity, self._hash_function)
 
-                # loop over the nodes of ith list
-                for node in bucket:
-                    temp.put(node.key,node.value)
+        for index in range(self.get_capacity()):
+            node = self._buckets[index]._head
+            while node is not None:
+                new_hash.put(node.key, node.value)
+                node = node.next
 
-            # update capacity of self to new_capacity
-            self._capacity = new_capacity
-
-            self._buckets = DynamicArray()  # create an empty DynamicArray for this buckets
-
-            # loop over the buckets of temp object
-            for i in range(temp._capacity):
-                self._buckets.append(
-                    temp._buckets.get_at_index(i))  # insert the ith bucket list into the buckets array of this object
-
-
+            # Replace the old HashMap attributes with the new ones
+        self._buckets = new_hash._buckets
+        self._capacity = new_hash._capacity
+        self._size = new_hash.get_size()
 
     def table_load(self) -> float:
         """
