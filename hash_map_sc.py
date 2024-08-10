@@ -168,7 +168,23 @@ class HashMap:
         for index in range(curr_buckets.length()):
             curr = curr_buckets[index]
             for node in curr:
-                self.put(node.key, node.value)
+                self._rehash(node.key, node.value)
+
+    def _rehash(self, key: str, value: object) -> None:
+        """
+        Helper method which handles rehashing of individual items.
+
+        :param key: a Python string instance
+        :param value: any Python object
+
+        :return: does not return
+
+        """
+        hash_index = self._hash_function(key) % self._capacity
+        curr_buckets = self._buckets[hash_index]
+        curr_buckets.insert(key, value)
+        self._size += 1
+
     def table_load(self) -> float:
         """
         Calculates and returns the current hash table load factor.
