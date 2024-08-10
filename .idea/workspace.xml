@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected resize table for Gradescope - 2.&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected resize table for Gradescope - 3.&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
@@ -587,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723314882965</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="&quot;Corrected resize table for Gradescope - 3.&quot;">
+      <option name="closed" value="true" />
+      <created>1723318723334</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1723318723334</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -603,7 +611,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;is_empty method - min heap - final - test&quot;" />
     <MESSAGE value="&quot;get_min method - min heap - final - test&quot;" />
     <MESSAGE value="&quot;get_min method - min heap - final - test2&quot;" />
     <MESSAGE value="&quot;get_min method - min heap - final - test3&quot;" />
@@ -628,7 +635,8 @@
     <MESSAGE value="&quot;Completed find_mode method. Did not correct resize table for Gradescope.&quot;" />
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 1.&quot;" />
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 2.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected resize table for Gradescope - 2.&quot;" />
+    <MESSAGE value="&quot;Corrected resize table for Gradescope - 3.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected resize table for Gradescope - 3.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
