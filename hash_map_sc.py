@@ -244,9 +244,9 @@ class HashMap:
         :return: does not return
         """
 
-        for _ in range(self.get_capacity()):
-            self._buckets = DynamicArray()
-            self._size = 0
+        for index in range(self.get_capacity()):
+            self._buckets[index] = LinkedList()
+        self._size = 0
 
 def find_mode(da: DynamicArray) -> tuple[DynamicArray, int]:
     """

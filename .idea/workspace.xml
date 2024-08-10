@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Completed clear method. Did not correct resize table for Gradescope - 3&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Completed clear method. Did not correct resize table for Gradescope - 4&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
@@ -547,7 +547,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723308101940</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="&quot;Completed clear method. Did not correct resize table for Gradescope - 4&quot;">
+      <option name="closed" value="true" />
+      <created>1723308308886</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1723308308886</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -563,7 +571,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Corrected remove method - fixed description and comments&quot;" />
     <MESSAGE value="&quot;Begin contain method of BST&quot;" />
     <MESSAGE value="&quot;Finished Contain Method&quot;" />
     <MESSAGE value="&quot;Add method - min heap - test&quot;" />
@@ -588,7 +595,8 @@
     <MESSAGE value="&quot;Completed clear method. Did not correct resize table for Gradescope.&quot;" />
     <MESSAGE value="&quot;Completed clear method. Did not correct resize table for Gradescope - 2&quot;" />
     <MESSAGE value="&quot;Completed clear method. Did not correct resize table for Gradescope - 3&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Completed clear method. Did not correct resize table for Gradescope - 3&quot;" />
+    <MESSAGE value="&quot;Completed clear method. Did not correct resize table for Gradescope - 4&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Completed clear method. Did not correct resize table for Gradescope - 4&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
