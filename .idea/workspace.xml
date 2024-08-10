@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Tries another correction for the resized_table method for hashMaps using chaining for collisions - 2.&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_oa.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_oa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720180214489</updated>
-    </task>
-    <task id="LOCAL-00009" summary="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;">
-      <option name="closed" value="true" />
-      <created>1720976633364</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1720976633364</updated>
     </task>
     <task id="LOCAL-00010" summary="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;">
       <option name="closed" value="true" />
@@ -596,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723328708877</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases&quot;">
+      <option name="closed" value="true" />
+      <created>1723330364768</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1723330364768</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values&quot;" />
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values - corrected method contains_key&quot;" />
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values - corrected method resize_table&quot;" />
     <MESSAGE value="&quot;Updating the queue_sa file&quot;" />
@@ -637,7 +637,8 @@
     <MESSAGE value="&quot;Hash Map with open addressing for collision resolution complete - try on Gradescope - 1.&quot;" />
     <MESSAGE value="&quot;Tries another correction for the resized_table method for hashMaps using chaining for collisions.&quot;" />
     <MESSAGE value="&quot;Tries another correction for the resized_table method for hashMaps using chaining for collisions - 2.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Tries another correction for the resized_table method for hashMaps using chaining for collisions - 2.&quot;" />
+    <MESSAGE value="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

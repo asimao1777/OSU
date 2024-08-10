@@ -279,8 +279,9 @@ class HashMap:
         :return: does not return
         """
 
-        for index in range(self.get_capacity()):
-            self._buckets[index] = LinkedList()
+        self._buckets = DynamicArray()
+        for _ in range(self._capacity):
+            self._buckets.append(LinkedList())
         self._size = 0
 
 

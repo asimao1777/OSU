@@ -303,8 +303,9 @@ class HashMap:
         :return: does not return
         """
 
-        for index in range(self.get_capacity()):
-            self._buckets[index] = DynamicArray()
+        self._buckets = DynamicArray()
+        for _ in range(self._capacity):
+            self._buckets.append(None)
         self._size = 0
 
     def __iter__(self):
