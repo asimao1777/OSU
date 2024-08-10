@@ -2,7 +2,7 @@
 # OSU Email: simaoosa@oregonstate.edu
 # Course: CS261 - Data Structures
 # Assignment: 06
-# Due Date: Jul 26, 2024
+# Due Date: Aug 13, 2024
 # Description: Creation of an Hashmap class using chaining for collision resolution
 
 
@@ -121,30 +121,31 @@ class HashMap:
 
         :return: does not return
         """
-        # Checks if parameter new capacity is not less than 1
-        if new_capacity < 1:
-            return
+        # Checks if new capacity is at least 1, if it is less than 1 do nothing.
+        if new_capacity >= 1:
+            # create a temporary hash map with new_capacity and same hash function as this object
+            temp = HashMap(new_capacity, self._hash_function)
 
-        if new_capacity < 2:
-            new_capacity = 2
+            # loop over the buckets of current hash map
+            for index in range(self.get_capacity()):
+                bucket = self._buckets.get_at_index(index)  # each linked list of the hash map
 
-        # Saves the current buckets and create a new dynamic array with the new capacity
-        old_buckets = self._buckets
-        self._capacity = self._next_prime(new_capacity)
-        self._buckets = DynamicArray()
+                # loop over the nodes of ith list
+                for node in bucket:
+                    temp.put(node.key,node.value)
 
-        for _ in range(self._capacity):
-            self._buckets.append(LinkedList())
+            # update capacity of self to new_capacity
+            self._capacity = new_capacity
+            self._buckets = temp._buckets
 
-        # Resets size before reinserting elements
-        self._size = 0
+            # self._buckets = DynamicArray()  # create an empty DynamicArray for this buckets
 
-        # Rehashes all nodes in the old buckets and insert them into the new buckets
-        for index in range(old_buckets.length()):
-            node = old_buckets[index]._head
-            while node is not None:
-                self.put(node.key, node.value)
-                node = node.next
+            # # loop over the buckets of temp object
+            # for i in range(temp._capacity):
+            #     self._buckets.append(
+            #         temp._buckets.get_at_index(i))  # insert the ith bucket list into the buckets array of this object
+
+
 
     def table_load(self) -> float:
         """
