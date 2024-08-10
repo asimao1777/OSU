@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Hash Map with chaining for collision resolution complete - method resize_table would not work in all cases when passed through Gradescope.&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Hash Map with open addressing for collision resolution complete - try on Gradescope - 1.&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_oa.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_oa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
     "Python.hash_map_oa.executor": "Run",
-    "Python.hash_map_sc.executor": "Debug",
+    "Python.hash_map_sc.executor": "Run",
     "Python.min_heap.executor": "Run",
     "Python.queue_sa.executor": "Run",
     "Python.queue_sll.executor": "Run",
@@ -112,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dynamic_array" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hash_map_oa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,11 +122,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Library/CloudStorage/Dropbox/30_OSU/Courses/CS 261_DATA STRUCTURES/Assignments/2" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Library/CloudStorage/Dropbox/30_OSU/Courses/CS 261_DATA STRUCTURES/Assignments/2/dynamic_array.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hash_map_oa.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hash_map_oa" />
         <item itemvalue="Python.hash_map_sc" />
         <item itemvalue="Python.min_heap" />
         <item itemvalue="Python.avl" />
         <item itemvalue="Python.bst" />
-        <item itemvalue="Python.dynamic_array" />
       </list>
     </recent_temporary>
   </component>
@@ -203,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720180214489</updated>
-    </task>
-    <task id="LOCAL-00006" summary="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;">
-      <option name="closed" value="true" />
-      <created>1720974435441</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1720974435441</updated>
     </task>
     <task id="LOCAL-00007" summary="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;">
       <option name="closed" value="true" />
@@ -596,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723321246166</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="&quot;Hash Map with open addressing for collision resolution complete - try on Gradescope - 1.&quot;">
+      <option name="closed" value="true" />
+      <created>1723324697762</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1723324697762</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -612,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;size and clear methods - min heap - final - test5&quot;" />
     <MESSAGE value="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;" />
     <MESSAGE value="&quot;build_heap method - min heap - final - test&quot;" />
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values&quot;" />
@@ -637,7 +637,8 @@
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 6.&quot;" />
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 7.&quot;" />
     <MESSAGE value="&quot;Hash Map with chaining for collision resolution complete - method resize_table would not work in all cases when passed through Gradescope.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Hash Map with chaining for collision resolution complete - method resize_table would not work in all cases when passed through Gradescope.&quot;" />
+    <MESSAGE value="&quot;Hash Map with open addressing for collision resolution complete - try on Gradescope - 1.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Hash Map with open addressing for collision resolution complete - try on Gradescope - 1.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -656,6 +657,11 @@
           <url>file://$PROJECT_DIR$/min_heap.py</url>
           <line>201</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hash_map_oa.py</url>
+          <line>106</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

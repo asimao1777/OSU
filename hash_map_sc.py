@@ -95,51 +95,80 @@ class HashMap:
 
         :return: does not return
         """
-
+        # Checks if load factor >= 1 and if it is resizes the hash
         load_factor = self.table_load()
         if load_factor >= 1:
-            self.resize_table(self.get_capacity()*2)
+            self.resize_table(self.get_capacity() * 2)
 
+        # Applies hash function to capacity to get hash index
         hash_index = self._hash_function(key) % self.get_capacity()
+
+        # Selects the bucket which refers to calculated hash index
         cur_bucket = self._buckets[hash_index]
 
-        node_key_exist = cur_bucket.contains(key)
-        if node_key_exist:
-            node_key_exist.value = value
+        # Inserts the key/value into the HashMap instance
+        node = cur_bucket.contains(key)
+        if node:
+            node.value = value
         else:
             cur_bucket.insert(key, value)
             self._size += 1
 
     def resize_table(self, new_capacity: int) -> None:
         """
-        Resizes the hash map to a new capacity and rehashes all keys.
+        Resizes the hash map to a new capacity and rehashes all
+        key/value pairs.
 
         :param new_capacity: an integer
 
         :return: does not return
         """
-        # Checks if new capacity is below 1 anf if it is, do nothing
+
+        # # Checks if new capacity is below 1 anf if it is, do nothing
+        # if new_capacity < 1:
+        #    return
+        #
+        # # Checks if the new capacity is a prime number and if it is not adjust
+        # if not self._is_prime(new_capacity):
+        #     new_capacity = self._next_prime(new_capacity)
+        #
+        # # Creates a new Hash table with the new capacity
+        # new_hash = HashMap(new_capacity, self._hash_function)
+        #
+        # # Transfers and rehashes key/values into new hash
+        # for index in range(self.get_capacity()):
+        #     node = self._buckets[index]._head
+        #     while node is not None:
+        #         new_hash.put(node.key, node.value)
+        #         node = node.next
+        #
+        # # Replaces the old HashMap attributes with the new ones
+        # self._buckets = new_hash._buckets
+        # self._capacity = new_hash._capacity
+
+        # Checks if new capacity is a prime number and greater than the number of items
         if new_capacity < 1:
-           return
+            return
 
-        # Checks if the new capacity is a prime number and if it is not adjust
-        if not self._is_prime(new_capacity):
-            new_capacity = self._next_prime(new_capacity)
+        # Initializes new buckets
+        new_capacity = self._next_prime(new_capacity)
+        new_buckets = DynamicArray()
 
-        # Creates a new Hash table with the new capacity
-        new_hash = HashMap(new_capacity, self._hash_function)
+        # Appends an array to each bucket
+        for _ in range(new_capacity):
+            new_buckets.append(LinkedList())
 
-        # Transfers and rehashes key/values into new hash
-        for index in range(self.get_capacity()):
-            node = self._buckets[index]._head
-            while node is not None:
-                new_hash.put(node.key, node.value)
-                node = node.next
+        # Stores the current buckets and reset the hash map
+        curr_buckets = self._buckets
+        self._buckets = new_buckets
+        self._capacity = new_capacity
+        self._size = 0
 
-        # Replaces the old HashMap attributes with the new ones
-        self._buckets = new_hash._buckets
-        self._capacity = new_hash._capacity
-
+        # Rehashes all non-tombstone entries from the current buckets
+        for index in range(curr_buckets.length()):
+            curr = curr_buckets[index]
+            for node in curr:
+                self.put(node.key, node.value)
     def table_load(self) -> float:
         """
         Calculates and returns the current hash table load factor.
@@ -173,10 +202,13 @@ class HashMap:
 
         :return: any Python object
         """
-
+        # Applies hash function to capacity to get hash index
         hash_index = self._hash_function(key) % self.get_capacity()
+
+        # Selects the bucket which refers to calculated hash index
         cur_bucket = self._buckets[hash_index]
 
+        # Checks if key exists in the bucket and if it does, returns its associated value.
         node_key_exist = cur_bucket.contains(key)
         if node_key_exist:
             return node_key_exist.value

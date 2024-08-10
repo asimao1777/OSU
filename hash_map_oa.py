@@ -87,40 +87,45 @@ class HashMap:
 
     def put(self, key: str, value: object) -> None:
         """
-        Updates the key/value pair in a HashMap object.
-        If the given key already exists, replace its value.
-        If the load factor is >= 0.5, resize the table to double its capacity.
+        Updates the key/value pair in a Hashmap object.
+
+        :param key: a Python string instance.
+        :param value: any Python object
+
+        :return: does not return
         """
 
-        # Resize if load factor is >= 0.5
-        if self.table_load() >= 0.5:
+        # Checks if load factor is >= 0.5 and if it is resizes the hash
+        load_factor = self.table_load()
+        if load_factor >= 0.5:
             self.resize_table(self.get_capacity() * 2)
 
-        # Find initial hash index
+        # Applies hash function to capacity to get hash index
         hash_index = self._hash_function(key) % self.get_capacity()
 
         # Start quadratic probing
         quad_index = hash_index
-        i = 1  # Quadratic probe index
+        prob_index = 1                              # Quadratic probe index
 
+        # Traverses the array checking key/value pairs
         while self._buckets.get_at_index(quad_index) is not None:
-            current_entry = self._buckets.get_at_index(quad_index)
+            curr = self._buckets.get_at_index(quad_index)
 
-            # Replace value if key matches and is not a tombstone
-            if current_entry.key == key and not current_entry.is_tombstone:
-                current_entry.value = value
+            # Replaces value if key matches and is not a tombstone
+            if curr.key == key and not curr.is_tombstone:
+                curr.value = value
                 return
 
-            # If key matches but is a tombstone, reuse this spot
-            if current_entry.key == key and current_entry.is_tombstone:
-                current_entry.value = value
-                current_entry.is_tombstone = False
+            # If key matches but is a tombstone, places key/value on spot
+            if curr.key == key and curr.is_tombstone:
+                curr.value = value
+                curr.is_tombstone = False
                 self._size += 1
                 return
 
-            # Quadratic probing formula
-            quad_index = (hash_index + i ** 2) % self._capacity
-            i += 1
+            # Recalculates new quad index using quadratic probing formula
+            quad_index = (hash_index + prob_index ** 2) % self._capacity
+            prob_index += 1
 
         # If no match is found, insert a new entry
         self._buckets.set_at_index(quad_index, HashEntry(key, value))
@@ -128,29 +133,35 @@ class HashMap:
 
     def resize_table(self, new_capacity: int) -> None:
         """
-        Resizes the table to the new capacity, rehashing all entries.
+        Resizes the hash map to a new capacity and rehashes all
+        key/value pairs.
+
+        :param new_capacity: an integer
+
+        :return: does not return
         """
 
-        # New capacity must be a prime number and greater than the number of elements
+        # Checks if new capacity is a prime number and greater than the number of items
         if new_capacity < self.get_size():
             return
+
         new_capacity = self._next_prime(new_capacity)
 
-        # Store the old buckets and reset the hash map
-        old_buckets = self._buckets
+        # Stores the current buckets and reset the hash map
+        curr_buckets = self._buckets
         self._buckets = DynamicArray()
         self._capacity = new_capacity
         self._size = 0
 
-        # Initialize new buckets
+        # Initializes new buckets
         for _ in range(self._capacity):
             self._buckets.append(None)
 
-        # Rehash all non-tombstone entries from the old buckets
-        for i in range(old_buckets.length()):
-            entry = old_buckets.get_at_index(i)
-            if entry is not None and not entry.is_tombstone:
-                self.put(entry.key, entry.value)
+        # Rehashes all non-tombstone entries from the current buckets
+        for index in range(curr_buckets.length()):
+            curr = curr_buckets.get_at_index(index)
+            if curr is not None and not curr.is_tombstone:
+                self.put(curr.key, curr.value)
 
     def table_load(self) -> float:
         """
