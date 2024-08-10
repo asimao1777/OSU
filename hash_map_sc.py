@@ -138,7 +138,7 @@ class HashMap:
             # Replace the old HashMap attributes with the new ones
         self._buckets = new_hash._buckets
         self._capacity = new_hash._capacity
-        self._size = new_hash.get_size()
+
 
     def table_load(self) -> float:
         """
