@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Completed get_keys_and_values method. Did not correct resize table for Gradescope - 2.&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Completed get_keys_and_values method. Did not correct resize table for Gradescope - 3.&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
     "Python.bst.executor": "Run",
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
-    "Python.hash_map_sc.executor": "Run",
+    "Python.hash_map_sc.executor": "Debug",
     "Python.min_heap.executor": "Run",
     "Python.queue_sa.executor": "Run",
     "Python.queue_sll.executor": "Run",
@@ -515,7 +515,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723304843663</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="&quot;Completed get_keys_and_values method. Did not correct resize table for Gradescope - 3.&quot;">
+      <option name="closed" value="true" />
+      <created>1723305273406</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1723305273406</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -531,7 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Corrected remove method - rev 2&quot;" />
     <MESSAGE value="&quot;Corrected remove method - rev 3&quot;" />
     <MESSAGE value="&quot;Corrected remove method - rev 4&quot;" />
     <MESSAGE value="&quot;Corrected remove method - rev 5&quot;" />
@@ -556,7 +563,8 @@
     <MESSAGE value="&quot;Trying to correct the resize_table method again&quot;" />
     <MESSAGE value="&quot;Completed get_keys_and_values method. Did not correct resize table for Gradescope.&quot;" />
     <MESSAGE value="&quot;Completed get_keys_and_values method. Did not correct resize table for Gradescope - 2.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Completed get_keys_and_values method. Did not correct resize table for Gradescope - 2.&quot;" />
+    <MESSAGE value="&quot;Completed get_keys_and_values method. Did not correct resize table for Gradescope - 3.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Completed get_keys_and_values method. Did not correct resize table for Gradescope - 3.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,6 +583,11 @@
           <url>file://$PROJECT_DIR$/min_heap.py</url>
           <line>201</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hash_map_sc.py</url>
+          <line>246</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
