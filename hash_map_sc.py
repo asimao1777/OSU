@@ -136,14 +136,13 @@ class HashMap:
 
             # update capacity of self to new_capacity
             self._capacity = new_capacity
-            self._buckets = temp._buckets
 
-            # self._buckets = DynamicArray()  # create an empty DynamicArray for this buckets
+            self._buckets = DynamicArray()  # create an empty DynamicArray for this buckets
 
-            # # loop over the buckets of temp object
-            # for i in range(temp._capacity):
-            #     self._buckets.append(
-            #         temp._buckets.get_at_index(i))  # insert the ith bucket list into the buckets array of this object
+            # loop over the buckets of temp object
+            for i in range(temp._capacity):
+                self._buckets.append(
+                    temp._buckets.get_at_index(i))  # insert the ith bucket list into the buckets array of this object
 
 
 

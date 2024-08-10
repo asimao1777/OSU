@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Completed find_mode method. Did not correct resize table for Gradescope.&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected resize table for Gradescope - 1.&quot;">
       <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -571,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723311441975</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="&quot;Corrected resize table for Gradescope - 1.&quot;">
+      <option name="closed" value="true" />
+      <created>1723314777903</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1723314777903</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -587,7 +594,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Add method - min heap - test&quot;" />
     <MESSAGE value="&quot;Add method - min heap - final - test2&quot;" />
     <MESSAGE value="&quot;is_empty method - min heap - final - test&quot;" />
     <MESSAGE value="&quot;get_min method - min heap - final - test&quot;" />
@@ -612,7 +618,8 @@
     <MESSAGE value="&quot;Completed clear method. Did not correct resize table for Gradescope - 4&quot;" />
     <MESSAGE value="&quot;Completed clear method. Did not correct resize table for Gradescope - 5&quot;" />
     <MESSAGE value="&quot;Completed find_mode method. Did not correct resize table for Gradescope.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Completed find_mode method. Did not correct resize table for Gradescope.&quot;" />
+    <MESSAGE value="&quot;Corrected resize table for Gradescope - 1.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected resize table for Gradescope - 1.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
