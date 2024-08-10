@@ -175,148 +175,172 @@ class HashMap:
 
     def empty_buckets(self) -> int:
         """
-        Returns the number of empty buckets in the hash map.
+        Checks and returns the number of empty buckets in a HashMap instance.
 
-        :param: a HashMap object
-        :return: an integer representing the number of empty buckets
+        :param: a Hashmap object
+
+        :return: an integer
         """
-        empty_count = 0
+        count = 0
+        for index in range(self._buckets.length()):
+            if (self._buckets.get_at_index(index) is None or
+                    self._buckets.get_at_index(index).is_tombstone):
+                count += 1
 
-        for i in range(self._buckets.length()):
-            if self._buckets.get_at_index(i) is None or self._buckets.get_at_index(i).is_tombstone:
-                empty_count += 1
-
-        return empty_count
+        return count
 
     def get(self, key: str) -> object:
         """
-        Returns the value associated with the given key.
+        Finds the value associated to a key in a Hashmap object.
 
         :param key: a Python string instance
-        :return: the value associated with the key, or None if the key is not found
+
+        :return: any Python object
         """
+        # Applies hash function to capacity to get hash index
         hash_index = self._hash_function(key) % self.get_capacity()
 
         # Start quadratic probing
         quad_index = hash_index
-        i = 1
+        prob_index = 1
 
+        # Traverses the array checking key/value pairs
         while self._buckets.get_at_index(quad_index) is not None:
-            current_entry = self._buckets.get_at_index(quad_index)
+            curr = self._buckets.get_at_index(quad_index)
 
-            if current_entry.key == key and not current_entry.is_tombstone:
-                return current_entry.value
+            # Returns value if key matches and is not a tombstone
+            if curr.key == key and not curr.is_tombstone:
+                return curr.value
 
-            # Quadratic probing formula
-            quad_index = (hash_index + i ** 2) % self._capacity
-            i += 1
+            # Recalculates new quad index using quadratic probing formula
+            quad_index = (hash_index + prob_index ** 2) % self._capacity
+            prob_index += 1
 
         return None
 
     def contains_key(self, key: str) -> bool:
         """
-        Checks if the key is in the hash map.
+        Checks if a key passed as a parameter exists in a Hashmap object
 
-        :param key: a Python string instance
-        :return: True if key is in the hash map, False otherwise
+        :param key: a Python string instance.
+
+        :return: a Boolean (True if the key is in the Hashmap object, False otherwise).
         """
+        # Applies hash function to capacity to get hash index
         hash_index = self._hash_function(key) % self.get_capacity()
 
         # Start quadratic probing
         quad_index = hash_index
-        i = 1
+        prob_index = 1
 
+        # Traverses the array checking key/value pairs
         while self._buckets.get_at_index(quad_index) is not None:
-            current_entry = self._buckets.get_at_index(quad_index)
+            curr = self._buckets.get_at_index(quad_index)
 
-            if current_entry.key == key and not current_entry.is_tombstone:
+            # Returns True if key matches and is not a tombstone
+            if curr.key == key and not curr.is_tombstone:
                 return True
 
-            # Quadratic probing formula
-            quad_index = (hash_index + i ** 2) % self._capacity
-            i += 1
+            # Recalculates new quad index using quadratic probing formula
+            quad_index = (hash_index + prob_index ** 2) % self._capacity
+            prob_index += 1
 
         return False
 
     def remove(self, key: str) -> None:
         """
-        Removes the key and its associated value from the hash map.
+        Removes the key passed as parameter and its associated value from the Hashmap object.
 
-        :param key: a Python string instance
-        :return: None
+        :param key: a Python string instance.
+
+        :return: does not return
         """
+        # Applies hash function to capacity to get hash index
         hash_index = self._hash_function(key) % self.get_capacity()
 
         # Start quadratic probing
         quad_index = hash_index
-        i = 1
+        prob_index = 1
 
+        # Traverses the array looking for key/value pair to remove
         while self._buckets.get_at_index(quad_index) is not None:
-            current_entry = self._buckets.get_at_index(quad_index)
+            curr = self._buckets.get_at_index(quad_index)
 
-            if current_entry.key == key and not current_entry.is_tombstone:
-                current_entry.is_tombstone = True
+            # Removes the key/pair value and replaces with a tombstone
+            if curr.key == key and not curr.is_tombstone:
+                curr.is_tombstone = True
                 self._size -= 1
                 return
 
-            # Quadratic probing formula
-            quad_index = (hash_index + i ** 2) % self._capacity
-            i += 1
+            # Recalculates new quad index using quadratic probing formula
+            quad_index = (hash_index + prob_index ** 2) % self._capacity
+            prob_index += 1
 
     def get_keys_and_values(self) -> DynamicArray:
         """
-        Returns a DynamicArray containing all key/value pairs in the hash map.
+        Traverses a Hashmap object and retrieves keys/values tuples stored in it.
 
-        :param: a HashMap object
-        :return: a DynamicArray containing tuples of (key, value)
+        :param: a Hashmap object.
+
+        :return: DynamicArrays instances containing tuples of keys/values
         """
-        pairs = DynamicArray()
+        final_array = DynamicArray()
 
-        for i in range(self._buckets.length()):
-            entry = self._buckets.get_at_index(i)
-            if entry is not None and not entry.is_tombstone:
-                pairs.append((entry.key, entry.value))
+        # Traverses array, takes key/value pair from position and append to final array.
+        for index in range(self._buckets.length()):
+            curr = self._buckets.get_at_index(index)
+            if curr is not None and not curr.is_tombstone:
+                final_array.append((curr.key, curr.value))
 
-        return pairs
+        return final_array
 
     def clear(self) -> None:
         """
-        Clears the contents of the hash map without changing the underlying capacity.
+        Clears the contents of a Hashmap object without changing its capacity.
 
-        :param: a HashMap object
-        :return: None
+        :param key: a Hashmap object
+
+        :return: does not return
         """
-        self._buckets = DynamicArray()
-        for _ in range(self._capacity):
-            self._buckets.append(None)
+
+        for index in range(self.get_capacity()):
+            self._buckets[index] = DynamicArray()
         self._size = 0
 
     def __iter__(self):
         """
         Returns an iterator for the hash map.
 
-        :return: an iterator for the hash map
+        :param: a Hashmap object
+
+        :return: an iterator
         """
         self._current = 0
-        # Find the first non-tombstone entry to start iteration
+
+        # Finds the first non-tombstone entry to start iteration
         while self._current < self.get_capacity():
             entry = self._buckets.get_at_index(self._current)
             if entry is not None and not entry.is_tombstone:
                 break
             self._current += 1
+
         return self
 
     def __next__(self):
         """
         Returns the next key/value pair in the hash map.
 
+        :param: a Hashmap object
+
         :return: the next key/value pair in the hash map
         """
+
         while self._current < self.get_capacity():
             entry = self._buckets.get_at_index(self._current)
             self._current += 1
             if entry is not None and not entry.is_tombstone:
                 return entry
+
         raise StopIteration
 
 

@@ -124,29 +124,7 @@ class HashMap:
         :return: does not return
         """
 
-        # # Checks if new capacity is below 1 anf if it is, do nothing
-        # if new_capacity < 1:
-        #    return
-        #
-        # # Checks if the new capacity is a prime number and if it is not adjust
-        # if not self._is_prime(new_capacity):
-        #     new_capacity = self._next_prime(new_capacity)
-        #
-        # # Creates a new Hash table with the new capacity
-        # new_hash = HashMap(new_capacity, self._hash_function)
-        #
-        # # Transfers and rehashes key/values into new hash
-        # for index in range(self.get_capacity()):
-        #     node = self._buckets[index]._head
-        #     while node is not None:
-        #         new_hash.put(node.key, node.value)
-        #         node = node.next
-        #
-        # # Replaces the old HashMap attributes with the new ones
-        # self._buckets = new_hash._buckets
-        # self._capacity = new_hash._capacity
-
-        # Checks if new capacity is a prime number and greater than the number of items
+        # Checks if new capacity is < 1, if it is, do nothing
         if new_capacity < 1:
             return
 
@@ -208,6 +186,7 @@ class HashMap:
         for index in range(self._buckets.length()):
             if self._buckets[index].length() == 0:
                 count += 1
+
         return count
 
     def get(self, key: str) -> object:
@@ -228,6 +207,7 @@ class HashMap:
         node_key_exist = cur_bucket.contains(key)
         if node_key_exist:
             return node_key_exist.value
+
         return None
 
     def contains_key(self, key: str) -> bool:
@@ -247,6 +227,7 @@ class HashMap:
         # Checks if key exists in the bucket and if it does, returns True.
         if cur_bucket.contains(key):
             return True
+
         return False
 
     def remove(self, key: str) -> None:
@@ -281,6 +262,7 @@ class HashMap:
         # Traverses each bucket, takes key/value pair from nodes and append to array.
         for index in range(self.get_capacity()):
             node = self._buckets[index]._head
+
             while node is not None:
                 key_val = (node.key, node.value)
                 final_array.append(key_val)
@@ -329,6 +311,7 @@ def find_mode(da: DynamicArray) -> tuple[DynamicArray, int]:
     max = 0
     for index in range(freq_map.get_capacity()):
         node = freq_map._buckets[index]._head
+
         while node is not None:
             if node.value > max:
                 max = node.value
@@ -338,6 +321,7 @@ def find_mode(da: DynamicArray) -> tuple[DynamicArray, int]:
     mode = DynamicArray()
     for index in range(freq_map.get_capacity()):
         node = freq_map._buckets[index]._head
+
         while node is not None:
             if node.value == max:
                 mode.append(node.key)
