@@ -91,15 +91,52 @@ class HashMap:
 
     def put(self, key: str, value: object) -> None:
         """
-        TODO: Write this implementation
+        Updates the key/value pair in a Hashmap object.
+
+        :param key: a Python string instance.
+        :param value: any Python object
+
+        :return: does not return
         """
-        pass
+
+        load_factor = self.table_load()
+        if load_factor >= 1:
+            self.resize_table(self.get_capacity()*2)
+
+        hash_index = self._hash_function(key) % self.get_capacity()
+        cur_bucket = self._buckets[hash_index]
+
+        node_key_exist = cur_bucket.contains(key)
+        if node_key_exist:
+            node_key_exist.value = value
+        else:
+            cur_bucket.insert(key, value)
+            self._size += 1
 
     def resize_table(self, new_capacity: int) -> None:
         """
-        TODO: Write this implementation
+        Resizes the hash map to a new capacity and rehashes all keys.
+
+        :param new_capacity: The new capacity of the hash map.
+        :return: None
         """
-        pass
+        # Saves the current buckets and create a new dynamic array with the new capacity
+        old_buckets = self._buckets
+        self._capacity = self._next_prime(new_capacity)
+        self._buckets = DynamicArray()
+
+        for _ in range(self._capacity):
+            self._buckets.append(LinkedList())
+
+        # Resets size before reinserting elements
+        self._size = 0
+
+        # Rehashes all nodes in the old buckets and insert them into the new buckets
+        for index in range(old_buckets.length()):
+            node = old_buckets[index]._head
+            while node is not None:
+                self.put(node.key, node.value)
+                node = node.next
 
     def table_load(self) -> float:
         """
@@ -121,7 +158,7 @@ class HashMap:
         """
 
         count = 0
-        for index in range(self.get_capacity()):
+        for index in range(self._buckets.length()):
             if self._buckets[index].length() == 0:
                 count += 1
         return count
@@ -135,12 +172,13 @@ class HashMap:
         :return: any Python object
         """
 
-        hash_index = self._hash_function(key)
+        hash_index = self._hash_function(key) % self.get_capacity()
+        cur_bucket = self._buckets[hash_index]
 
-        for index in range(self.get_capacity()):
-            if self._buckets[index] == hash_index:
-                return self._buckets[index].length[hash_index]
-            return None
+        node_key_exist = cur_bucket.contains(key)
+        if node_key_exist:
+            return node_key_exist.value
+        return None
 
     def contains_key(self, key: str) -> bool:
         """
@@ -164,11 +202,11 @@ class HashMap:
         :return: does not return
         """
 
-        hash_index = self._hash_function(key)
-
-        for index in range(self.get_capacity()):
-            if self._buckets[index] == hash_index:
-                self._buckets[index].remove[hash_index]
+        hash_index = self._hash_function(key) % self.get_capacity()
+        cur_bucket = self._buckets[hash_index]
+        if self.contains_key(key):
+            cur_bucket.remove(key)
+            self._size -= 1
 
     def get_keys_and_values(self) -> DynamicArray:
         """

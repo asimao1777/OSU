@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Final AVL - pre-submission&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;build_heap method - min heap - final - test&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
@@ -66,7 +66,7 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.hash_map_sc">
     <configuration name="avl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -133,6 +133,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="hash_map_sc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS261" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hash_map_sc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="min_heap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -155,42 +177,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="queue_sa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS261" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/queue_sa.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hash_map_sc" />
         <item itemvalue="Python.min_heap" />
         <item itemvalue="Python.avl" />
         <item itemvalue="Python.bst" />
         <item itemvalue="Python.dynamic_array" />
-        <item itemvalue="Python.queue_sa" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -371,15 +371,95 @@
       <option name="project" value="LOCAL" />
       <updated>1722131215921</updated>
     </task>
-    <task id="LOCAL-00022" summary="&quot;Final AVL - pre-submission&quot;">
+    <task id="LOCAL-00022" summary="&quot;Add method - min heap - test&quot;">
       <option name="closed" value="true" />
-      <created>1722435950908</created>
+      <created>1722698479319</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1722435950908</updated>
+      <updated>1722698479319</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="&quot;Add method - min heap - final - test2&quot;">
+      <option name="closed" value="true" />
+      <created>1722699981973</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1722699981973</updated>
+    </task>
+    <task id="LOCAL-00024" summary="&quot;is_empty method - min heap - final - test&quot;">
+      <option name="closed" value="true" />
+      <created>1722700837052</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1722700837052</updated>
+    </task>
+    <task id="LOCAL-00025" summary="&quot;get_min method - min heap - final - test&quot;">
+      <option name="closed" value="true" />
+      <created>1722701009712</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1722701009712</updated>
+    </task>
+    <task id="LOCAL-00026" summary="&quot;get_min method - min heap - final - test2&quot;">
+      <option name="closed" value="true" />
+      <created>1722701142704</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1722701142704</updated>
+    </task>
+    <task id="LOCAL-00027" summary="&quot;get_min method - min heap - final - test3&quot;">
+      <option name="closed" value="true" />
+      <created>1722701224801</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1722701224801</updated>
+    </task>
+    <task id="LOCAL-00028" summary="&quot;size and clear methods - min heap - final - test3&quot;">
+      <option name="closed" value="true" />
+      <created>1722702320879</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1722702320879</updated>
+    </task>
+    <task id="LOCAL-00029" summary="&quot;size and clear methods - min heap - final - test4&quot;">
+      <option name="closed" value="true" />
+      <created>1722702601623</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1722702601623</updated>
+    </task>
+    <task id="LOCAL-00030" summary="&quot;size and clear methods - min heap - final - test5&quot;">
+      <option name="closed" value="true" />
+      <created>1722702788608</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1722702788608</updated>
+    </task>
+    <task id="LOCAL-00031" summary="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;">
+      <option name="closed" value="true" />
+      <created>1722711557588</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1722711557588</updated>
+    </task>
+    <task id="LOCAL-00032" summary="&quot;build_heap method - min heap - final - test&quot;">
+      <option name="closed" value="true" />
+      <created>1722715492238</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1722715492238</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -395,10 +475,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;First 2 methods of SLL implementation - w/o Sentinel&quot;" />
-    <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel&quot;" />
-    <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel - corrected error on Data Validation upon Gradescope fail on Slice method&quot;" />
-    <MESSAGE value="&quot;All SSL methods finished - w/ Sentinel - corrected another error on Data Validation upon Gradescope fail on Slice method - 2nd submission&quot;" />
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished&quot;" />
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;" />
     <MESSAGE value="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;" />
@@ -413,8 +489,18 @@
     <MESSAGE value="&quot;Corrected remove method - fixed description and comments&quot;" />
     <MESSAGE value="&quot;Begin contain method of BST&quot;" />
     <MESSAGE value="&quot;Finished Contain Method&quot;" />
-    <MESSAGE value="&quot;Final AVL - pre-submission&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Final AVL - pre-submission&quot;" />
+    <MESSAGE value="&quot;Add method - min heap - test&quot;" />
+    <MESSAGE value="&quot;Add method - min heap - final - test2&quot;" />
+    <MESSAGE value="&quot;is_empty method - min heap - final - test&quot;" />
+    <MESSAGE value="&quot;get_min method - min heap - final - test&quot;" />
+    <MESSAGE value="&quot;get_min method - min heap - final - test2&quot;" />
+    <MESSAGE value="&quot;get_min method - min heap - final - test3&quot;" />
+    <MESSAGE value="&quot;size and clear methods - min heap - final - test3&quot;" />
+    <MESSAGE value="&quot;size and clear methods - min heap - final - test4&quot;" />
+    <MESSAGE value="&quot;size and clear methods - min heap - final - test5&quot;" />
+    <MESSAGE value="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;" />
+    <MESSAGE value="&quot;build_heap method - min heap - final - test&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;build_heap method - min heap - final - test&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -431,8 +517,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/min_heap.py</url>
-          <line>58</line>
-          <option name="timeStamp" value="8" />
+          <line>201</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -447,6 +533,9 @@
       <configuration name="PythonConfigurationType">
         <watch expression="max" />
         <watch expression="value" />
+        <watch expression="min" />
+        <watch expression="self._capacity" />
+        <watch expression="self._size" />
       </configuration>
     </watches-manager>
   </component>
