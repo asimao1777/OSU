@@ -121,24 +121,46 @@ class HashMap:
 
         :return: does not return
         """
+        # if new_capacity < 1:
+        #    return
+        #
+        # if not self._is_prime(new_capacity):
+        #     new_capacity = self._next_prime(new_capacity)
+        #
+        # new_hash = HashMap(new_capacity, self._hash_function)
+        #
+        # for index in range(self.get_capacity()):
+        #     node = self._buckets[index]._head
+        #     while node is not None:
+        #         new_hash.put(node.key, node.value)
+        #         node = node.next
+        #
+        #     # Replace the old HashMap attributes with the new ones
+        # self._buckets = new_hash._buckets
+        # self._capacity = new_hash._capacity
         if new_capacity < 1:
-           return
+            return
 
-        if not self._is_prime(new_capacity):
-            new_capacity = self._next_prime(new_capacity)
+            # Find the next prime number greater than or equal to new_capacity
+        new_capacity = self._next_prime(new_capacity)
 
-        new_hash = HashMap(new_capacity, self._hash_function)
+        # Create a new array of SLLs (empty buckets)
+        new_buckets = DynamicArray()
+        for _ in range(new_capacity):
+            new_buckets.append(LinkedList())
 
-        for index in range(self.get_capacity()):
-            node = self._buckets[index]._head
-            while node is not None:
-                new_hash.put(node.key, node.value)
-                node = node.next
+        # Rehash all elements in the current buckets
+        for i in range(self._buckets.length()):
+            current = self._buckets[i]._head
+            while current is not None:
+                # Recompute hash for the current element
+                new_index = self._hash_function(current.key) % new_capacity
+                new_buckets[new_index].insert(current.key, current.value)
+                current = current.next
 
-            # Replace the old HashMap attributes with the new ones
-        self._buckets = new_hash._buckets
-        self._capacity = new_hash._capacity
-
+        # Replace old buckets with new buckets
+        self._buckets = new_buckets
+        self._capacity = new_capacity
 
     def table_load(self) -> float:
         """
