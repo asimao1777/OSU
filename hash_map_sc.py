@@ -117,9 +117,14 @@ class HashMap:
         """
         Resizes the hash map to a new capacity and rehashes all keys.
 
-        :param new_capacity: The new capacity of the hash map.
-        :return: None
+        :param new_capacity: an integer
+
+        :return: does not return
         """
+        # Checks if parameter new capacity is not less than 1
+        if new_capacity < 1:
+            return
+
         # Saves the current buckets and create a new dynamic array with the new capacity
         old_buckets = self._buckets
         self._capacity = self._next_prime(new_capacity)
