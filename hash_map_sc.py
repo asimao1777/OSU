@@ -228,8 +228,8 @@ class HashMap:
         """
         final_array = DynamicArray()
         for index in range(self.get_capacity()):
-            node = self._buckets[index]._head
-            for sll_index in range(self._buckets[index].length()):
+            for _ in range(self._buckets[index].length()):
+                node = self._buckets[index]._head
                 key_val = (node.key, node.value)
                 final_array.append(key_val)
         return final_array
