@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Corrected resize table for Gradescope - 7.&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Hash Map with chaining for collision resolution complete - method resize_table would not work in all cases when passed through Gradescope.&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash_map_oa.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_oa.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,7 @@
     "Python.bst.executor": "Run",
     "Python.dynamic_array (1).executor": "Run",
     "Python.dynamic_array.executor": "Run",
+    "Python.hash_map_oa.executor": "Run",
     "Python.hash_map_sc.executor": "Debug",
     "Python.min_heap.executor": "Run",
     "Python.queue_sa.executor": "Run",
@@ -66,7 +67,7 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.hash_map_sc">
+  <component name="RunManager">
     <configuration name="avl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -202,14 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720180214489</updated>
-    </task>
-    <task id="LOCAL-00005" summary="&quot;All Stack ADT (implemented with DA) methods finished&quot;">
-      <option name="closed" value="true" />
-      <created>1720974341362</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1720974341362</updated>
     </task>
     <task id="LOCAL-00006" summary="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;">
       <option name="closed" value="true" />
@@ -595,7 +588,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723319906786</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="&quot;Hash Map with chaining for collision resolution complete - method resize_table would not work in all cases when passed through Gradescope.&quot;">
+      <option name="closed" value="true" />
+      <created>1723321246166</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1723321246166</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -611,7 +612,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;size and clear methods - min heap - final - test4&quot;" />
     <MESSAGE value="&quot;size and clear methods - min heap - final - test5&quot;" />
     <MESSAGE value="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;" />
     <MESSAGE value="&quot;build_heap method - min heap - final - test&quot;" />
@@ -636,7 +636,8 @@
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 5.&quot;" />
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 6.&quot;" />
     <MESSAGE value="&quot;Corrected resize table for Gradescope - 7.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Corrected resize table for Gradescope - 7.&quot;" />
+    <MESSAGE value="&quot;Hash Map with chaining for collision resolution complete - method resize_table would not work in all cases when passed through Gradescope.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Hash Map with chaining for collision resolution complete - method resize_table would not work in all cases when passed through Gradescope.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
