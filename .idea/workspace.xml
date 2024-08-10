@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;build_heap method - min heap - final - test&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Hash_map_sc methods done until get keys and values&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
@@ -459,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722715492238</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="&quot;Hash_map_sc methods done until get keys and values&quot;">
+      <option name="closed" value="true" />
+      <created>1723296702818</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1723296702818</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -475,7 +483,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished&quot;" />
     <MESSAGE value="&quot;All Stack ADT (implemented with DA) methods finished - description corrected&quot;" />
     <MESSAGE value="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;" />
     <MESSAGE value="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;" />
@@ -500,7 +507,8 @@
     <MESSAGE value="&quot;size and clear methods - min heap - final - test5&quot;" />
     <MESSAGE value="&quot;remove_min and _percolate_down methods - min heap - final - test&quot;" />
     <MESSAGE value="&quot;build_heap method - min heap - final - test&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;build_heap method - min heap - final - test&quot;" />
+    <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Hash_map_sc methods done until get keys and values&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -189,7 +189,9 @@ class HashMap:
         :return: a Boolean (True if the key is in the Hashmap object, False otherwise).
         """
 
-        if self.get(key):
+        hash_index = self._hash_function(key) % self.get_capacity()
+        cur_bucket = self._buckets[hash_index]
+        if cur_bucket.contains(key):
             return True
         return False
 
