@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases&quot;">
+    <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases - 2&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash_map_oa.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_oa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash_map_sc.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash_map_sc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,14 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720180214489</updated>
-    </task>
-    <task id="LOCAL-00010" summary="&quot;Corrected method resize on the Dynamic Array data structure class.&quot;">
-      <option name="closed" value="true" />
-      <created>1720976717318</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1720976717318</updated>
     </task>
     <task id="LOCAL-00011" summary="&quot;Finished Queue class implemented on Static Array w/ circular buffer&quot;">
       <option name="closed" value="true" />
@@ -597,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723330364768</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases - 2&quot;">
+      <option name="closed" value="true" />
+      <created>1723330872261</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1723330872261</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -613,7 +611,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values - corrected method contains_key&quot;" />
     <MESSAGE value="&quot;Hash_map_sc methods done until get keys and values - corrected method resize_table&quot;" />
     <MESSAGE value="&quot;Updating the queue_sa file&quot;" />
     <MESSAGE value="&quot;Trying to correct the resize_table method again&quot;" />
@@ -638,7 +635,8 @@
     <MESSAGE value="&quot;Tries another correction for the resized_table method for hashMaps using chaining for collisions.&quot;" />
     <MESSAGE value="&quot;Tries another correction for the resized_table method for hashMaps using chaining for collisions - 2.&quot;" />
     <MESSAGE value="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases&quot;" />
+    <MESSAGE value="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases - 2&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases - 2&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
