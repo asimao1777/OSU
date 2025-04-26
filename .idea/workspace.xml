@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e907b8ee-5486-47fb-9c8a-070596292016" name="Changes" comment="&quot;Finished Hash map classes with chaining and open addressing for collisions. Could not solve resize_table method for hash_maps for collisions in some cases - 2&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_08_24__11_40__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_08_24__19_58__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,15 +30,15 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/asimao1777/OSU&quot;,
-    &quot;accountId&quot;: &quot;fd3ed8d3-e528-4078-840c-503c6862e012&quot;
+    &quot;url&quot;: &quot;https://github.com/asimao1777/OSU.git&quot;,
+    &quot;accountId&quot;: &quot;9ed47570-5213-4dd6-aa56-171d3cb00a67&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2ipGg9utzkEbFKdP1ZVJWBZ2a3y" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -61,12 +63,13 @@
     "Python.stack_da.executor": "Run",
     "Python.stack_sll.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.avl">
     <configuration name="avl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS261" />
       <option name="ENV_FILES" value="" />
@@ -190,7 +193,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-348a24fa61fa-5312c7369657-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.23774.444" />
       </set>
     </attachedChunks>
   </component>
@@ -642,7 +645,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/Library/CloudStorage/Dropbox/30_OSU/Courses/CS 261_DATA STRUCTURES/Assignments/2/dynamic_array.py</url>
+          <url>file://$PROJECT_DIR$/../../../Dropbox/30_OSU/Courses/CS 261_DATA STRUCTURES/Assignments/2/dynamic_array.py</url>
           <line>308</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
